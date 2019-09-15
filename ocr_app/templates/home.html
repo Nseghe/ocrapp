@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    <body>
+        <ol class="breadcrumb" style="border-radius:20px">
+              <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item active">Home</li>
+        </ol>
+
+        <div class="container-fluid" style="margin-bottom:50px">
+            <div class="form-row" style="margin-top:10px">
+                    <div class="container-fluid col-md-4 mx-auto">
+                        <img style="width:100%" src="{{ url_for('static', filename='home_image.jpg') }}">
+                    </div>
+                    <div class="container-fluid col-md-4 mx-auto">
+                        <img style="width:100%" src="{{ url_for('static', filename='home_image.jpg') }}">
+                    </div>
+                    <div class="container-fluid col-md-4 mx-auto">
+                        <img style="width:100%" src="{{ url_for('static', filename='home_image.jpg') }}">
+                    </div>
+            </div>
+        </div>
+    </body>
+{% endblock content %}

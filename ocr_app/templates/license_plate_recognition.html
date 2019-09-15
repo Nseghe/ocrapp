@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+    <body>
+        <ol class="breadcrumb" style="border-radius:20px">
+            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class="breadcrumb-item active">License Plate Recognition</li>
+        </ol>
+
+        <div class="masthead text-white text-center">
+            <div class="overlay"></div>
+            <div class="container" style="background:black;padding-bottom:30px;margin-bottom:30px; border-radius:20px; width:100%">
+              <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <p><h3 style="color:white; margin-bottom:10px"><b>Welcome to our License Plate Recognition (LPR) System</b></h3></p>
+                    <p><h5 class="mb-4"><b>Upload an Image Below to Begin</b></h5></p>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form>
+                        <div class="form-row">
+                                <button class="btn btn-block btn-md btn-primary" style="display:block; width:60%; margin:auto">See All Previous Tasks</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="image_upload_container">
+            <div class="frame">
+                <div class="center">
+                    <div class="bar"></div>
+                    <div class="title">Drop file to upload</div>
+                    <div class="dropzone">
+                        <div class="content">
+                            <img src="https://100dayscss.com/codepen/upload.svg" class="upload">
+                            <span class="filename"></span>
+                            <input type="file" class="input">
+                        </div>
+                    </div>
+                    <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
+                    <img src="https://100dayscss.com/codepen/checkmark.svg" class="done">
+                    <div class="upload-btn">Upload file</div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+{% endblock content %}
+
