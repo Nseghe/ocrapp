@@ -28,11 +28,13 @@ def create_app(config_class=Config):
         from ocr_app.main.routes import main
         from ocr_app.license_owners.routes import license_owners
         from ocr_app.customers.routes import customers
+        from ocr_app.engines.routes import lpr_model
         from ocr_app.errors.handlers import errors
         app.register_blueprint(users)
         app.register_blueprint(main)
         app.register_blueprint(license_owners)
         app.register_blueprint(customers)
+        app.register_blueprint(lpr_model)
         app.register_blueprint(errors)
 
         return app

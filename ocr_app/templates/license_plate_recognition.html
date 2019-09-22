@@ -65,12 +65,12 @@
                         <div class="content">
                             <img src="https://100dayscss.com/codepen/upload.svg" class="upload">
                             <span class="filename"></span>
-                            <input type="file" class="in put">
+                            <input type="file" class="input">
                         </div>
                     </div>
                     <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
                     <img src="https://100dayscss.com/codepen/checkmark.svg" class="done">
-                    <div class="upload-btn">Upload file</div>
+                    <div class="upload-btn" href="{{ url_for('lpr_model.upload_file') }}">Upload file</div>
                 </div>
             </div>
         </div>

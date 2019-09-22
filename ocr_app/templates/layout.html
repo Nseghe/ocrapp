@@ -118,9 +118,9 @@
 				  <a class="dropdown-item" style="margin-top:5px;border-radius:10px;margin-bottom:5px" href="{{ url_for('license_owners.license_plate_recognition') }}"><b>LPR</b></a>
 				</div>
 			    <li class="nav-item active" style="border: 0.5px solid white;border-radius:5px">
-				<a class="nav-link" href="{{ url_for('main.home') }}">
+				<a class="nav-link" href="{{ url_for('license_owners.show_all_license_owners') }}">
 				  <i class="fas fa-fw fa-users"></i>
-				  <span>All Clients</span>
+				  <span>All License Owners</span>
 				</a>
 			  </li>
 		{% else %}
@@ -142,7 +142,9 @@
     <div id="content-wrapper">
 		<!-- /.container-fluid -->
 		<div class="container-fluid" style="padding:15px 20px 20px 30px">
-			{% block content %}{% endblock %}
+			{% block content %}
+
+			{% endblock %}
         </div>
 	</div>
 

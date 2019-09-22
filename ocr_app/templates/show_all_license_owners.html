@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb" style="border-radius:20px">
+      <li class="breadcrumb-item">
+        <a href="#">Dashboard</a>
+      </li>
+      <li class="breadcrumb-item active">All License Owners</li>
+    </ol>
+
+    <!-- DataTables Example -->
+    <div class="card mb-3" style="border-radius:20px">
+        <div class="card-header" style="border-radius:20px"><i class="fas fa-table" style="margin-right:5px"></i>Select License Owner</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table id="customerTable" class="display" style="width:100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">License Number</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Name</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Age</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Job</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Marital Status</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Education</th>
+                </tr>
+            </thead>
+
+            <tbody class="default">
+                {% for license_owner in all_license_owners.items %}
+                    <tr onclick="window">
+                        <td class="text-center" style="white-space: nowrap;">{{ license_owner.license_number }}</td>
+                        <td class="text-center" style="white-space: nowrap;">{{ license_owner.name }}</td>
+                        <td class="text-center" style="white-space: nowrap;">{{ license_owner.age }}</td>
+                        <td class="text-center" style="white-space: nowrap;">{{ license_owner.job }}</td>
+                        <td class="text-center" style="white-space: nowrap;">{{ license_owner.marital }}</td>
+                        <td class="text-center" style="white-space: nowrap;">{{ license_owner.education }}</td>
+                    </tr>
+                {% endfor %}
+              </tbody>
+
+              <tfoot>
+                <tr>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">License Number</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Name</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Age</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Job</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Marital Status</th>
+                    <th class="text-center" style="white-space: nowrap;" scope="col">Education</th>
+                </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="card-footer small text-muted" style="text-align:right">Updated yesterday at 11:59 PM</div>
+    </div>
+
+    <div class="container">
+        <a class="btn btn-primary btn-md" style="width:40%; display:block; margin:auto" role="button" href="{{ url_for('customers.add_new_customer') }}">Add New Customer</a>
+    </div>
+{% endblock content %}
+
+
+
+
+
+

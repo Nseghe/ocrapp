@@ -17,7 +17,7 @@
                             <div class="container  mx-auto">
                                 <div style="margin-top:30px; text-align:center; color:gray"><h5>Student</h5></div>
                                 <div style="margin-bottom:5px; text-align:center"><h2><b>Nseghe Essiet</b></h2></div>
-                                <div style="margin-top:0px; text-align:center; color:gray"><h4><b>{{ license_owner.license_number }}</b></h4></div>
+                                <div style="margin-top:0px; text-align:center; color:gray"><h4><b>{{ license_own.license_number }}</b></h4></div>
                             </div>
                         </div>
                     </div>
@@ -60,11 +60,10 @@
                     <div class="card mb-3 ml-4" style="border-radius:10px">
                         <div class="card-header"><i class="fas fa-info-circle" style="margin-right:10px"></i><b>Personal</b></div>
                         <div class="card-body">
-                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Age:<a style="margin-left:95px">23</a></div>
-                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Education:<a style="margin-left:49px">Tertiary</a></div>
-                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Occupation:<a style="margin-left:41px">Technician</a></div>
-                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Marital Status:<a style="margin-left:26px">Married</a></div>
-                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Housing Status:<a style="margin-left:15px">Rental</a></div>
+                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Age:<a style="margin-left:95px">{{ license_own.age }}</a></div>
+                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Education:<a style="margin-left:49px">{{ license_own.education }}</a></div>
+                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Occupation:<a style="margin-left:41px">{{ license_own.job }}</a></div>
+                            <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Marital Status:<a style="margin-left:26px">{{ license_own.marital }}</a></div>
                         </div>
                     </div>
                 </div>
