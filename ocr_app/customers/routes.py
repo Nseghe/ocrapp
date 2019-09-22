@@ -1,7 +1,7 @@
 from datetime import datetime
 from ocr_app import db
 from flask import (render_template, request, redirect, Blueprint)
-from ocr_app.engines.forms import CustomerForm
+from ocr_app.license_owners.forms import CustomerForm
 from flask_login import login_required
 from ocr_app.models import Customer
 

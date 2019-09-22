@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-    <body>
-        <ol class="breadcrumb" style="border-radius:20px">
-            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-            <li class="breadcrumb-item active">License Plate Recognition</li>
-        </ol>
+    <ol class="breadcrumb" style="border-radius:20px">
+        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        <li class="breadcrumb-item active">License Plate Recognition</li>
+    </ol>
 
+    <div class="container" style="margin-bottom: 40px; margin-top: 30px">
         <div class="masthead text-white text-center">
             <div class="overlay"></div>
             <div class="container" style="background:black;padding-bottom:30px;margin-bottom:30px; border-radius:20px; width:100%">
@@ -24,8 +24,10 @@
               </div>
             </div>
         </div>
+    </div>
 
-        <div class="image_upload_container">
+    <div class="mb-4 container form-row">
+        <div class="container col-md-7">
             <div class="frame">
                 <div class="center">
                     <div class="bar"></div>
@@ -34,7 +36,7 @@
                         <div class="content">
                             <img src="https://100dayscss.com/codepen/upload.svg" class="upload">
                             <span class="filename"></span>
-                            <input type="file" class="input">
+                            <input type="file" class="in put">
                         </div>
                     </div>
                     <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
@@ -44,6 +46,24 @@
             </div>
         </div>
 
-    </body>
+        <div class="mt-5 col-md-5">
+            <div class="content-section">
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Check License Plate</legend>
+                        <div class="form-group">
+                            {{ form.plate_number.label(class="form-control-label") }}
+                            {{ form.plate_number(class="form-control form-control-lg") }}
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-outline-info") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
 

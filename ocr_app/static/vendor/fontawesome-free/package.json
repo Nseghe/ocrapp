@@ -60,7 +60,7 @@
   ],
   "dependencies": {},
   "description": "The iconic font, CSS, and SVG framework",
-  "engines": {
+  "license_owners": {
     "node": ">=6"
   },
   "homepage": "https://fontawesome.com",
