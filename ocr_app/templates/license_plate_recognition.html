@@ -16,8 +16,8 @@
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                     <form>
-                        <div class="form-row">
-                                <button class="btn btn-block btn-md btn-primary" style="display:block; width:60%; margin:auto">See All Previous Tasks</button>
+                        <div class="form-row" >
+                                <a class="btn btn-block btn-md btn-primary" style="display:block; width:60%; margin:auto">See All Previous Tasks</a>
                         </div>
                     </form>
                 </div>
@@ -61,16 +61,18 @@
                 <div class="center">
                     <div class="bar"></div>
                     <div class="title">Drop Image to upload</div>
-                    <div class="dropzone">
-                        <div class="content">
-                            <img src="https://100dayscss.com/codepen/upload.svg" class="upload">
-                            <span class="filename"></span>
-                            <input type="file" class="input">
+                    <form action="/upload_file" method="POST" enctype="multipart/form-data">
+                        <div class="dropzone">
+                            <div class="content">
+                                <img src="https://100dayscss.com/codepen/upload.svg" class="upload">
+                                <span class="filename"></span>
+                                <input type="file" class="input">
+                            </div>
                         </div>
-                    </div>
-                    <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
-                    <img src="https://100dayscss.com/codepen/checkmark.svg" class="done">
-                    <div class="upload-btn" href="{{ url_for('lpr_model.upload_file') }}">Upload file</div>
+                        <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
+                        <img src="https://100dayscss.com/codepen/checkmark.svg" class="done">
+                        <button type="submit" class="btn btn-primary">Upload file</button>
+                    </form>
                 </div>
             </div>
         </div>

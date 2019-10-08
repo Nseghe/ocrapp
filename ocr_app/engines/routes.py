@@ -2,6 +2,7 @@ import os
 from flask import render_template, current_app, url_for, flash, redirect, request, Blueprint
 from ocr_app.engines.utils import allowed_file, lpr_engine
 from werkzeug.utils import secure_filename
+from ocr_app.main.routes import main
 
 
 lpr_model = Blueprint('lpr_model', __name__)
@@ -25,8 +26,9 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(save_location, filename))
             license_number = lpr_engine(os.path.join(save_location, filename))
-            return redirect(url_for('uploaded_file', filename=filename))
+            # return redirect(url_for('uploaded_file', filename=filename))
+            return redirect(url_for('main.home'))
         else:
             flash('Invalid File Type')
             return redirect(request.url)
-    # return render_template('license_plate_recognition.html')
+    return redirect(url_for('main.home'))
