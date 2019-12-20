@@ -16,10 +16,10 @@ def license_plate_recognition():
 	return render_template('license_plate_recognition.html', title='License Plate Recognition', form=form)
 
 
-@license_owners.route("/license_owner/<string:plate_number>", methods=['GET', 'POST'])
+@license_owners.route("/license_owner", methods=['GET', 'POST'])
 @login_required
-def license_owner(plate_number):
-	license_own = License_Owner.query.get(plate_number)
+def license_owner():
+	license_own = License_Owner.query.get('AAA841LM')
 	return render_template('license_owner.html', title='License Owner', license_own=license_own)
 
 

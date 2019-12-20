@@ -27,7 +27,7 @@
     </div>
 
     <div class="mx-auto mt-5 mb-5 container form-row">
-        <div class="mb-5 mt-5 ml-5 mr-5 col-md-5">
+        <div class="mb-5 mt-5 mx-auto col-md-5">
             <div class="content-section">
                 <form method="POST" action="">
                     {{ form.hidden_tag() }}
@@ -56,26 +56,56 @@
             </div>
         </div>
 
-        <div class="container col-md-5">
-            <div class="frame">
-                <div class="center">
-                    <div class="bar"></div>
-                    <div class="title">Drop Image to upload</div>
-                    <form action="/upload_file" method="POST" enctype="multipart/form-data">
-                        <div class="dropzone">
-                            <div class="content">
-                                <img src="https://100dayscss.com/codepen/upload.svg" class="upload">
-                                <span class="filename"></span>
-                                <input type="file" class="input">
-                            </div>
+<!--        <div class="container col-md-5">-->
+<!--            <div class="frame">-->
+<!--                <div class="center">-->
+<!--                    <div class="bar"></div>-->
+<!--                    <div class="title">Drop Image to upload</div>-->
+<!--                    <form action="/upload_file" method="POST" enctype="multipart/form-data">-->
+<!--                        <div class="dropzone">-->
+<!--                            <div class="content">-->
+<!--                                <img src="https://100dayscss.com/codepen/upload.svg" class="upload">-->
+<!--                                <span class="filename"></span>-->
+<!--                                <input type="file" class="input">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">-->
+<!--                        <img src="https://100dayscss.com/codepen/checkmark.svg" class="done">-->
+<!--                        <button type="submit" class="btn btn-primary">Upload file</button>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="container col-md-5 content-section" style="margin:auto">-->
+<!--            <form action="/upload_file" method="POST" enctype="multipart/form-data">-->
+<!--                <legend class="border-bottom mb-4">Upload License Plate Image</legend>-->
+<!--                <input type="file" name="file">-->
+<!--                <input type="submit">-->
+<!--            </form>-->
+<!--        </div>-->
+
+         <div class="mb-5 mt-5 mx-auto col-md-5">
+            <div class="content-section">
+                <form method="POST" action="/upload_file">
+                    <fieldset>
+                        <legend class="border-bottom mb-4">Upload License Plate Image</legend>
+                        <div  class="mt-5 mb-4">
+                            <input type=file name=file>
                         </div>
-                        <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">
-                        <img src="https://100dayscss.com/codepen/checkmark.svg" class="done">
-                        <button type="submit" class="btn btn-primary">Upload file</button>
-                    </form>
-                </div>
+                        <div>
+                            <input type=submit value="Upload Image" class="btn btn-outline-info">
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                    </div>
+                </form>
             </div>
         </div>
+
+
+
     </div>
 {% endblock content %}
 

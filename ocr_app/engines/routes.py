@@ -18,17 +18,18 @@ def upload_file():
             return redirect(request.url)
         file = request.files['file']
         # if user does not select file, browser also
-        # submit an empty part without filename
+        # submits an empty part without filename
         if file.filename == '':
             flash('No selected file')
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(save_location, filename))
-            license_number = lpr_engine(os.path.join(save_location, filename))
-            # return redirect(url_for('uploaded_file', filename=filename))
-            return redirect(url_for('main.home'))
+            # license_number = lpr_engine(os.path.join(save_location, filename))
+            return redirect(url_for('uploaded_file', filename=filename))
+            # return redirect(url_for('main.home'))
+            flash('File Uploaded Successfully')
         else:
             flash('Invalid File Type')
             return redirect(request.url)
-    return redirect(url_for('main.home'))
+    return redirect(url_for('license_owners.license_plate_recognition'))
