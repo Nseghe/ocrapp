@@ -26,10 +26,11 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(save_location, filename))
             # license_number = lpr_engine(os.path.join(save_location, filename))
-            return redirect(url_for('uploaded_file', filename=filename))
+            # return redirect(url_for('uploaded_file', filename=filename))
             # return redirect(url_for('main.home'))
             flash('File Uploaded Successfully')
         else:
             flash('Invalid File Type')
             return redirect(request.url)
-    return redirect(url_for('license_owners.license_plate_recognition'))
+    return redirect(url_for('license_owners.license_plate_recog'))
+    # return redirect(url_for('main.home'))

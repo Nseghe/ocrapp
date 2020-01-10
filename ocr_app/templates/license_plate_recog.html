@@ -86,20 +86,18 @@
 <!--        </div>-->
 
          <div class="mb-5 mt-5 mx-auto col-md-5">
-            <div class="content-section">
-                <form method="POST" action="/upload_file">
+            <div class="content-section" class="form-group">
+                <form action="{{ url_for('lpr_model.upload_file') }}" method="post">
                     <fieldset>
-                        <legend class="border-bottom mb-4">Upload License Plate Image</legend>
-                        <div  class="mt-5 mb-4">
-                            <input type=file name=file>
+                        <legend class="border-bottom mb-4">License Plate Image</legend>
+                        <div>License Plate Image</div>
+                        <div  style="margin-top: 10px; margin-bottom: 30px">
+                            <input type=file name=file class="btn btn-outline-info waves-effect">
                         </div>
                         <div>
-                            <input type=submit value="Upload Image" class="btn btn-outline-info">
+                            <input type="submit" formmethod="post" value="Upload Image" class="btn btn-outline-info">
                         </div>
                     </fieldset>
-
-                    <div class="form-group">
-                    </div>
                 </form>
             </div>
         </div>

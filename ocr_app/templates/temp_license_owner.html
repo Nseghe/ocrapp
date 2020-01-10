@@ -151,9 +151,76 @@
     <div id="content-wrapper">
 		<!-- /.container-fluid -->
 		<div class="container-fluid" style="padding:15px 20px 20px 30px">
-			{% block content %}
+            <body style="background:white">
+                <ol class="breadcrumb" style="border-radius:20px">
+                  <li class="breadcrumb-item">
+                    <a href="#">Dashboard</a>
+                  </li>
+                  <li class="breadcrumb-item active">License Owner</li>
+                </ol>
 
-			{% endblock %}
+                <div class="container-fluid">
+                    <div class="form-row" style="margin-top:10px">
+                        <div class="container-fluid col-md-4 mx-auto">
+                            <div class="card mb-3" style="border-radius:20px; margin-top:10px">
+                                <div class="card-body" style="vertical-align:middle">
+                                    <img class="rounded-circle account-img mx-auto" src="./static/profile_pics/default2.jpg" style="max-width:40%;display:block">
+                                    <div class="container  mx-auto">
+                                        <div style="margin-top:30px; text-align:center; color:gray"><h5>{{ license_own.job }}</h5></div>
+                                        <div style="margin-bottom:5px; text-align:center"><h2><b>{{ license_own.name }}</b></h2></div>
+                                        <div style="margin-top:0px; text-align:center; color:gray"><h4><b>{{ license_own.license_number }}</b></h4></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid form-row col-md-7 mx-auto my-auto">
+                            <div class="col-md-5 mx-auto" style="margin-top:10px; margin-bottom:10px">
+                                <div class="card mb-3" style="border-radius:10px">
+                                    <div class="card-header"><i class="fa fa-globe" style="margin-right:10px"></i>Address</div>
+                                    <div class="card-body">
+                                        <div style="margin-bottom:10px"><i class="fa fa-home" style="margin-right:20px"></i>University of Lagos</div>
+                                        <div style="margin-bottom:10px"><i class="fa fa-building" style="margin-right:25px"></i>Algostacks AI</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mx-auto" style="margin-top:10px; margin-bottom:10px">
+                                <div class="card mb-3" style="border-radius:10px">
+                                    <div class="card-header"><i class="fa fa-address-card aria-hidden='true'" style="margin-right:10px"></i>Contact</div>
+                                    <div class="card-body">
+                                        <div style="margin-bottom:10px"><i class="fa fa-phone" style="margin-right:20px"></i><a href="#">+2347031970201</a></div>
+                                        <div style="margin-bottom:10px"><i class="fa fa-envelope" style="margin-right:20px"></i><a href="#">essietnseghe@gmail.com</a></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container form-row" style="padding:10px 20px 10px 40px">
+                                <div class="col-md-8 mx-auto" style="margin-top:10px; margin-bottom:10px">
+                                    <div class="card mb-3" style="border-radius:10px">
+                                        <div class="card-header"><i class="fas fa-sitemap" style="margin-right:10px"></i>Organization</div>
+                                        <div class="card-body">
+                                            <div style="margin-bottom:10px"><i class="fa fa-building" style="margin-right:20px"></i>Bank of Industry</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:20px">
+                        <div class="col-md-4">
+                            <div class="card mb-3 ml-4" style="border-radius:10px">
+                                <div class="card-header"><i class="fas fa-info-circle" style="margin-right:10px"></i><b>Personal</b></div>
+                                <div class="card-body">
+                                    <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Age:<a style="margin-left:95px">{{ license_own.age }}</a></div>
+                                    <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Education:<a style="margin-left:49px">{{ license_own.education }}</a></div>
+                                    <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Occupation:<a style="margin-left:41px">{{ license_own.job }}</a></div>
+                                    <div style="margin-bottom:10px"><i class="fa fa-id-badge" style="margin-right:20px"></i>Marital Status:<a style="margin-left:26px">{{ license_own.marital }}</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
         </div>
 	</div>
 
