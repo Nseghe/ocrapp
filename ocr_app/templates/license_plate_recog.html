@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% block content %}
+    <ol class="breadcrumb" style="border-radius:20px">
+        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        <li class="breadcrumb-item active">License Plate Recognition</li>
+    </ol>
+
+    <div class="container" style="margin-bottom: 40px; margin-top: 30px">
+        <div class="masthead text-white text-center">
+            <div class="overlay"></div>
+            <div class="container" style="background:black;padding-bottom:30px;margin-bottom:30px; border-radius:20px; width:100%">
+              <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <p><h3 style="color:white; margin-bottom:10px"><b>Welcome to our License Plate Recognition (LPR) System</b></h3></p>
+                    <p><h5 class="mb-4"><b>Upload an Image Below to Begin</b></h5></p>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form>
+                        <div class="form-row" >
+                                <a class="btn btn-block btn-md btn-primary" style="display:block; width:60%; margin:auto">See All Previous Tasks</a>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto mt-5 mb-5 container form-row">
+        <div class="mb-5 mt-5 mx-auto col-md-5">
+            <div class="content-section">
+                <form method="POST" action="">
+                    {{ license_plate_form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Check License Plate</legend>
+                        <div class="form-group">
+                            {{ license_plate_form.plate_number.label(class="form-control-label") }}
+
+                            {% if license_plate_form.plate_number.errors %}
+                                {{ license_plate_form.plate_number(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in license_plate_form.plate_number.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ license_plate_form.plate_number(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        {{ license_plate_form.submit(class="btn btn-outline-info") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+         <div class="mb-5 mt-5 mx-auto col-md-5">
+            <div class="content-section" class="form-group">
+                <form method="post", enctype="multipart/form-data",
+                      action="{{ url_for('license_owners.file_upload') }}" >
+                    {{ license_plate_image_form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">License Plate Image</legend>
+                        <div class="form-group">
+                            {{ license_plate_image_form.plate_image.label(class="form-control-label") }}
+
+                            {% if license_plate_image_form.plate_image.errors %}
+                                {{ license_plate_image_form.plate_image(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in license_plate_image_form.plate_image.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ license_plate_image_form.plate_image(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        {{ license_plate_image_form.submit(class="btn btn-outline-info") }}
+                    </div>
+
+
+<!--                    <fieldset>-->
+<!--                        <legend class="border-bottom mb-4">License Plate Image</legend>-->
+<!--                        <div>License Plate Image</div>-->
+<!--                        <div  style="margin-top: 10px; margin-bottom: 30px">-->
+<!--                            <input type=file name=file class="btn btn-outline-info waves-effect">-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <input type="submit" formmethod="post" value="Upload Image" class="btn btn-outline-info">-->
+<!--                        </div>-->
+<!--                    </fieldset>-->
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+{% endblock content %}
+

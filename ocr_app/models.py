@@ -58,11 +58,13 @@ class Customer(db.Model):
 				self.account_balance, self.housing_status, self.existing_loan)
 
 
-class License_Owners(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
+class License_Owner(db.Model):
+	license_number = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(20), nullable=True)
 	age = db.Column(db.Integer, nullable=False)
 	job = db.Column(db.String(20), nullable=False)
-	marital_status = db.Column(db.String(20), nullable=False)
+	marital = db.Column(db.String(20), nullable=False)
+	education = db.Column(db.String(20), nullable=False)
 
 	def __repr__(self):
-		return "Customer('{}', '{}', '{}')".format(self.age, self.job, self.marital_status)
+		return "Customer('{}', '{}', '{}', '{}', '{}')".format(self.name, self.age, self.job, self.marital, self.education)

@@ -17,7 +17,7 @@ $(document).ready(function() {
 //        console.log( table.row( this ).data() );
         var data = table.row( this ).data();
 //        alert( "You clicked on "+data[0]+"\'s row" );
-        window.location = 'customer_profile'
+        window.location = 'license_owner'
     });
 
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
     $('#customerTable tbody').on('click', 'tr', function () {
         $.ajax({
             type: "POST",
-            url: "/customer_profile",
+            url: "/license_owner",
             data: {
                 id: $table.row( this ).data()[0]
             },

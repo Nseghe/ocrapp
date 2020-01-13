@@ -10,6 +10,15 @@
   <meta name="author" content="">
 
   <title>Algostacks AI - Dashboard</title>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul class=flashes>
+			{% for message in messages %}
+			  <li>{{ message }}</li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
 
   <link href="./static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
@@ -115,12 +124,12 @@
 				  <span>Modules</span>
 				</a>
 				<div class="dropdown-menu" style="background:lavender; border-radius:10px; margin-bottom:10px" aria-labelledby="pagesDropdown">
-				  <a class="dropdown-item" style="margin-top:5px;border-radius:10px;margin-bottom:5px" href="{{ url_for('license_owners.license_plate_recognition') }}"><b>LPR</b></a>
+				  <a class="dropdown-item" style="margin-top:5px;border-radius:10px;margin-bottom:5px" href="{{ url_for('license_owners.license_plate_recog') }}"><b>LPR</b></a>
 				</div>
 			    <li class="nav-item active" style="border: 0.5px solid white;border-radius:5px">
-				<a class="nav-link" href="{{ url_for('main.home') }}">
+				<a class="nav-link" href="{{ url_for('license_owners.show_all_license_owners') }}">
 				  <i class="fas fa-fw fa-users"></i>
-				  <span>All Clients</span>
+				  <span>All License Owners</span>
 				</a>
 			  </li>
 		{% else %}
@@ -142,7 +151,9 @@
     <div id="content-wrapper">
 		<!-- /.container-fluid -->
 		<div class="container-fluid" style="padding:15px 20px 20px 30px">
-			{% block content %}{% endblock %}
+			{% block content %}
+
+			{% endblock %}
         </div>
 	</div>
 
