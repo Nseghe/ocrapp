@@ -26,11 +26,8 @@ MarkupSafe==1.1.1
 nbformat==4.4.0
 numpy==1.16.4
 
-<<<<<<< HEAD
-Pillow==7.0.0
-=======
-Pillow==7.0.0
->>>>>>> a74eec7fd47111fe85a89873f7b637efa326c363
+
+Pillow==7.0.0f73fae349e394e2b746e4cc6a99d9e629669c3b9
 plotly==3.9.0
 pycparser==2.19
 pyrsistent==0.15.2
