@@ -27,7 +27,8 @@ nbformat==4.4.0
 numpy==1.16.4
 
 
-Pillow==7.0.0f73fae349e394e2b746e4cc6a99d9e629669c3b9
+
+Pillow==7.0.0
 plotly==3.9.0
 pycparser==2.19
 pyrsistent==0.15.2
