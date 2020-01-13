@@ -1,6 +1,6 @@
 import os
 from flask import render_template, current_app, url_for, flash, redirect, request, Blueprint
-from ocr_app.engines.utils import allowed_file, lpr_engine
+from ocr_app.engines.utils import allowed_file
 from werkzeug.utils import secure_filename
 from ocr_app.main.routes import main
 

@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, RadioField, SubmitField
+from flask_wtf.file import FileField, FileRequired
 from wtforms.validators import DataRequired, Length, ValidationError
 from ocr_app.models import License_Owner
 
@@ -23,3 +24,12 @@ class LicensePlateForm(FlaskForm):
             if not license_owner:
                 raise ValidationError('That License Number does not exist in our database. Please try again.')
 
+
+class LicensePlateImageForm(FlaskForm):
+    plate_image = FileField('License Plate Image', validators=[FileRequired()])
+    submit = SubmitField('Upload Image')
+
+    def allowed_file(filename):
+        allowed_extensions = set(['jpg', 'jpeg'])
+        if not ('.' in filename and filename.rsplit('.', 1)[1].lower() in allowed_extensions):
+            raise ValidationError("This file type is not Valid. \nPlease select a 'jpg' or 'jpeg' file")

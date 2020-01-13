@@ -30,74 +30,71 @@
         <div class="mb-5 mt-5 mx-auto col-md-5">
             <div class="content-section">
                 <form method="POST" action="">
-                    {{ form.hidden_tag() }}
+                    {{ license_plate_form.hidden_tag() }}
                     <fieldset class="form-group">
                         <legend class="border-bottom mb-4">Check License Plate</legend>
                         <div class="form-group">
-                            {{ form.plate_number.label(class="form-control-label") }}
+                            {{ license_plate_form.plate_number.label(class="form-control-label") }}
 
-                            {% if form.plate_number.errors %}
-                                {{ form.plate_number(class="form-control form-control-lg is-invalid") }}
+                            {% if license_plate_form.plate_number.errors %}
+                                {{ license_plate_form.plate_number(class="form-control form-control-lg is-invalid") }}
                                 <div class="invalid-feedback">
-                                    {% for error in form.plate_number.errors %}
+                                    {% for error in license_plate_form.plate_number.errors %}
                                         <span>{{ error }}</span>
                                     {% endfor %}
                                 </div>
                             {% else %}
-                                {{ form.plate_number(class="form-control form-control-lg") }}
+                                {{ license_plate_form.plate_number(class="form-control form-control-lg") }}
                             {% endif %}
                         </div>
                     </fieldset>
 
                     <div class="form-group">
-                        {{ form.submit(class="btn btn-outline-info") }}
+                        {{ license_plate_form.submit(class="btn btn-outline-info") }}
                     </div>
                 </form>
             </div>
         </div>
 
-<!--        <div class="container col-md-5">-->
-<!--            <div class="frame">-->
-<!--                <div class="center">-->
-<!--                    <div class="bar"></div>-->
-<!--                    <div class="title">Drop Image to upload</div>-->
-<!--                    <form action="/upload_file" method="POST" enctype="multipart/form-data">-->
-<!--                        <div class="dropzone">-->
-<!--                            <div class="content">-->
-<!--                                <img src="https://100dayscss.com/codepen/upload.svg" class="upload">-->
-<!--                                <span class="filename"></span>-->
-<!--                                <input type="file" class="input">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <img src="https://100dayscss.com/codepen/syncing.svg" class="syncing">-->
-<!--                        <img src="https://100dayscss.com/codepen/checkmark.svg" class="done">-->
-<!--                        <button type="submit" class="btn btn-primary">Upload file</button>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="container col-md-5 content-section" style="margin:auto">-->
-<!--            <form action="/upload_file" method="POST" enctype="multipart/form-data">-->
-<!--                <legend class="border-bottom mb-4">Upload License Plate Image</legend>-->
-<!--                <input type="file" name="file">-->
-<!--                <input type="submit">-->
-<!--            </form>-->
-<!--        </div>-->
 
          <div class="mb-5 mt-5 mx-auto col-md-5">
             <div class="content-section" class="form-group">
-                <form action="{{ url_for('lpr_model.upload_file') }}" method="post">
-                    <fieldset>
+                <form method="post", enctype="multipart/form-data",
+                      action="{{ url_for('license_owners.file_upload') }}" >
+                    {{ license_plate_image_form.hidden_tag() }}
+                    <fieldset class="form-group">
                         <legend class="border-bottom mb-4">License Plate Image</legend>
-                        <div>License Plate Image</div>
-                        <div  style="margin-top: 10px; margin-bottom: 30px">
-                            <input type=file name=file class="btn btn-outline-info waves-effect">
-                        </div>
-                        <div>
-                            <input type="submit" formmethod="post" value="Upload Image" class="btn btn-outline-info">
+                        <div class="form-group">
+                            {{ license_plate_image_form.plate_image.label(class="form-control-label") }}
+
+                            {% if license_plate_image_form.plate_image.errors %}
+                                {{ license_plate_image_form.plate_image(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in license_plate_image_form.plate_image.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ license_plate_image_form.plate_image(class="form-control form-control-lg") }}
+                            {% endif %}
                         </div>
                     </fieldset>
+
+                    <div class="form-group">
+                        {{ license_plate_image_form.submit(class="btn btn-outline-info") }}
+                    </div>
+
+
+<!--                    <fieldset>-->
+<!--                        <legend class="border-bottom mb-4">License Plate Image</legend>-->
+<!--                        <div>License Plate Image</div>-->
+<!--                        <div  style="margin-top: 10px; margin-bottom: 30px">-->
+<!--                            <input type=file name=file class="btn btn-outline-info waves-effect">-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <input type="submit" formmethod="post" value="Upload Image" class="btn btn-outline-info">-->
+<!--                        </div>-->
+<!--                    </fieldset>-->
                 </form>
             </div>
         </div>

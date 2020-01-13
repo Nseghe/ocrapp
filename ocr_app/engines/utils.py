@@ -1,5 +1,5 @@
 import os
-from ocr_app.engines.sub_routines import Main
+# from ocr_app.engines.sub_routines import Main
 from flask import current_app
 
 
@@ -11,5 +11,5 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in allowed_extensions
 
 
-def lpr_engine(image_location):
-    return Main(image_location)
+# def lpr_engine(image_location):
+#     return Main(image_location)
