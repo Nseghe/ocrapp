@@ -30,7 +30,8 @@ def upload_file():
             file.save(os.path.join(save_location, filename))
             alpr.set_top_n(1)
             results = alpr.recognize_file(file)
-            alpr.unload
+            if alpr:
+                alpr.unload
             flash(results)
             # license_number = lpr_engine(os.path.join(save_location, filename))
             # return redirect(url_for('uploaded_file', filename=filename))
