@@ -1,4 +1,6 @@
 import os
+from os import environ
+from openalpr import Alpr
 from flask import render_template, current_app, url_for, flash, redirect, request, Blueprint
 from ocr_app.engines.utils import allowed_file
 from werkzeug.utils import secure_filename
@@ -7,6 +9,7 @@ from ocr_app.main.routes import main
 
 lpr_model = Blueprint('lpr_model', __name__)
 save_location = os.path.join(current_app.root_path, 'static/plate_images')
+alpr = Alpr("us", "/home/nseghe/openalpr/config/openalpr.conf.defaults", "/home/nseghe/openalpr/runtime_data/")
 
 
 @lpr_model.route('/upload_file', methods=['GET', 'POST'])
@@ -25,10 +28,18 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(save_location, filename))
+            if not alpr.is_loaded():
+                flash("Error loading OpenALPR")
+                return redirect(url_for('license_owners.license_plate_recog'))
+            else:
+                alpr.set_top_n(1)
+                results = alpr.recognize_file(file)
+                alpr.unload
+                flash(results)
             # license_number = lpr_engine(os.path.join(save_location, filename))
             # return redirect(url_for('uploaded_file', filename=filename))
             # return redirect(url_for('main.home'))
-            flash('File Uploaded Successfully')
+            # flash('File Uploaded Successfully')
         else:
             flash('Invalid File Type')
             return redirect(request.url)

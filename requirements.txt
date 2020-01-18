@@ -1,3 +1,4 @@
+openalpr
 attrs==19.1.0
 bcrypt==3.1.6
 blinker==1.4
