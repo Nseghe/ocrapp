@@ -28,14 +28,10 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(save_location, filename))
-            if not alpr.is_loaded():
-                flash("Error loading OpenALPR")
-                return redirect(url_for('license_owners.license_plate_recog'))
-            else:
-                alpr.set_top_n(1)
-                results = alpr.recognize_file(file)
-                alpr.unload
-                flash(results)
+            alpr.set_top_n(1)
+            results = alpr.recognize_file(file)
+            alpr.unload
+            flash(results)
             # license_number = lpr_engine(os.path.join(save_location, filename))
             # return redirect(url_for('uploaded_file', filename=filename))
             # return redirect(url_for('main.home'))
