@@ -41,10 +41,11 @@ def file_upload():
 #		flash(results['results'][0]['candidates'])
 		if results['results']:
 			flash('Filename: {}'.format(filename))
-			result = results['results'][0]['candidates'][0]['plate']
+			best_guess = results['results'][0]['candidates'][0]['plate']
 			for result in results['results'][0]['candidates']:
 				flash('License Number: {}, Confidence: {}'.format(result['plate'], result['confidence']))
-			return redirect(url_for('license_owners.license_owner', plate_number='AAA345FC'))
+			flash(best_guess)
+			return redirect(url_for('license_owners.license_owner', plate_number=best_guess))
 		else:
 			flash('No result')
 			return redirect(url_for('license_owners.license_plate_recog'))
