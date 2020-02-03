@@ -9,22 +9,26 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Algostacks AI - Dashboard</title>
-	{% with messages = get_flashed_messages() %}
-		{% if messages %}
-			<ul class=flashes>
-			{% for message in messages %}
-			  <li>{{ message }}</li>
-			{% endfor %}
-			</ul>
-		{% endif %}
-	{% endwith %}
-
   <link href="./static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <link href="./static/css/sb-admin.css" rel="stylesheet">
   <link href="/static/css/image_upload.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+  <title>Algostacks AI - Dashboard</title>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<div class="alert alert-primary alert-dismissible fade show" role="alert">
+					<span>{{ message }}</span>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+            	</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
 
 </head>
 

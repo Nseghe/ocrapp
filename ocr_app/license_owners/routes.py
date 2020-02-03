@@ -1,4 +1,5 @@
 import os
+from openalpr import Alpr
 from flask import render_template, redirect, request, current_app, flash, url_for, Blueprint
 from flask_login import login_required
 from ocr_app.license_owners.forms import LicensePlateForm, LicensePlateImageForm
@@ -7,6 +8,9 @@ from werkzeug.utils import secure_filename
 from ocr_app.main.routes import main
 
 license_owners = Blueprint('license_owners', __name__)
+openalpr_runtime = os.path.join(current_app.root_path, 'runtime_data')
+openalpr_conf = os.path.join(current_app.root_path, 'config/openalpr.conf.defaults')
+alpr = Alpr('us', openalpr_conf, openalpr_runtime)
 
 
 @license_owners.route("/license_plate_recog", methods=['GET', 'POST'])
@@ -29,8 +33,22 @@ def file_upload():
 	if form.validate_on_submit():
 		f = form.plate_image.data
 		filename = secure_filename(f.filename)
-		f.save(os.path.join(current_app.root_path, 'static/plate_images', filename))
-		return redirect(url_for('main.home'))
+		file_location = os.path.join(current_app.root_path, 'static/plate_images', filename)
+		f.save(file_location)
+		alpr.set_top_n(5)
+		results = alpr.recognize_file(file_location)
+		os.remove(file_location)
+#		flash(results['results'][0]['candidates'])
+		if results['results']:
+			flash('Filename: {}'.format(filename))
+			best_guess = results['results'][0]['candidates'][0]['plate']
+			for result in results['results'][0]['candidates']:
+				flash('License Number: {}, Confidence: {}'.format(result['plate'], result['confidence']))
+			flash(best_guess)
+			return redirect(url_for('license_owners.license_owner', plate_number=best_guess))
+		else:
+			flash('No result')
+			return redirect(url_for('license_owners.license_plate_recog'))
 
 
 @license_owners.route("/license_owner", methods=['GET', 'POST'])
@@ -45,7 +63,7 @@ def license_owner():
 @license_owners.route("/show_all_license_owners", methods=['GET', 'POST'])
 @login_required
 def show_all_license_owners():
-	# page = request.args.get('page', 1, type=int)
-    # all_license_owners = License_Owner.query.order_by(License_Owner.license_number.desc()).paginate(page=page, per_page=100)
-    # return render_template('show_all_license_owners.html', title='All License Owners', all_license_owners=all_license_owners)
-	return redirect(url_for('main.testing', temp='AMD2346HG'))
+	page = request.args.get('page', 1, type=int)
+	all_license_owners = License_Owner.query.order_by(License_Owner.license_number.desc()).paginate(page=page, per_page=100)
+	return render_template('show_all_license_owners.html', title='All License Owners', all_license_owners=all_license_owners)
+#	return redirect(url_for('main.testing', temp='AMD2346HG'))
