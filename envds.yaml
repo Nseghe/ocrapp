@@ -166,7 +166,7 @@ environments:
         Please make sure to login and logout of Agemni each time you use it to
         avoid further timeouts
       Cell Phone Number: 9998887777
-      Act. Date: 03/09/2021
+      Activation Date: 03/09/2021
     name: devhub-AGEMCMS-8521
 selectors:
   - selectors:
