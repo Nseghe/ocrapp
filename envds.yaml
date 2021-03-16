@@ -5,8 +5,24 @@ environments:
     endpoints:
       - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/TempDataForTest/security.asp'
         type: http
-        credentialsId: admin-qa
+        credentialsId: admin-TempDataForTest
         name: TempDataForTest
+      - name: sqlserver-TempDataForTest
+        ConnectionURL: 'sqlserver://10.187.19.243/TempDataForTest'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+    variables:
+      Cell Phone Number: 9998887777
+      Activation Date: 03/09/2021
+    name: dev-AGEMCMS-8521
+  - type: Prod
+    description: Production environment
+    automated: false
+    endpoints:
+      - URL: 'https://app.agemni.com/dishstar/trainingcms/security.asp'
+        type: http
+        credentialsId: prod-david
+        name: trainingcms
     variables:
       company_name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
       Company Name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
@@ -165,9 +181,589 @@ environments:
       Internal Unauthorized Text: >-
         Please make sure to login and logout of Agemni each time you use it to
         avoid further timeouts
-      Cell Phone Number: 9998887777
-      Activation Date: 03/09/2021
-    name: devhub-AGEMCMS-8521
+    name: Production
+  - type: Dev
+    description: Dev environment
+    automated: false
+    endpoints:
+      - URL: 'http://test.agemni.com/dishstar/TempDataForTest/security.asp'
+        type: http
+        credentialsId: agsup-TempDataForTest
+        name: TempDataForTest
+      - URL: 'http://test.agemni.com/agemni/security.asp'
+        type: http
+        credentialsId: admin-internal
+        name: internal
+      - URL: 'https://test.agemni.com'
+        type: http
+        name: domain
+      - URL: 'https://test.agemni.com/dishstar/krcomm/security.asp'
+        type: http
+        credentialsId: agsup-krcomm
+        name: krcomm
+      - URL: 'https://test.agemni.com/dishstar/sateo816724/security.asp'
+        type: http
+        credentialsId: agsup-Microcom
+        name: Microcom
+      - name: sqlserver-TempDataForTest
+        ConnectionURL: 'sqlserver://localhost/TempDataForTest'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-krcomm
+        ConnectionURL: 'sqlserver://localhost/krcomm'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-Microcom
+        ConnectionURL: 'sqlserver://localhost/sateo816724'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+    variables:
+      company_name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
+      Company Name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
+      KR Communications Company Name: Agemni CMS - KR Communications
+      Original Company Name: ALLIANCE TECHNOLOGY GROUP
+      Updated Company Name: JUST ANOTHER TECHNOLOGY GROUP
+      Updated Company Name In Welcome Text: Agemni CMS - JUST ANOTHER TECHNOLOGY GROUP
+      unauthorized_text: >-
+        For support questions regarding this Agemni CMS event, please call
+        801-569-9800 Monday - Friday 9 AM - 6 PM MST.
+      Unauthorized Text: >-
+        For support questions regarding this Agemni CMS event, please call
+        801-569-9800 Monday - Friday 9 AM - 6 PM MST.
+      payroll-details-start-date: 4/8/2010
+      wo-number: 123
+      wo-lead-id: 319
+      wo-rep-id: 888
+      wo-kit-id: 2603
+      wo-prom-id: 1583
+      wo-agreement-num: 333
+      wo-selected-wo: null
+      date_time: <YYYYMMDDhhmmss>
+      employee_ceron: CERON
+      int-prom-vendor-val: ATTUVI
+      int-prom-type-val: R
+      int-prom-class-val: OE
+      int-prom-reconc-val: R
+      int-prom-code-val: e2e
+      Receiver Wally: 29
+      Receiver 4K Joey: 84
+      Receiver Joey 20: 86
+      Receiver Genie 2: 96
+      Receiver Hopper Duo: 97
+      Receiver Joey 3: 98
+      int-kits-templates-dvr-val: 2
+      int-kits-templates-hd-val: 3
+      PrimaryPlans Employee Type Value: R
+      PrimaryPlan Emp Type Rep: Rep
+      PrimaryPlans Type Value: Flat Rate
+      PrimaryPlans Type Value In Hidden Field: F
+      hr-primary-plans-type-flat-val: F
+      PrimaryPlans Holdback From Value: 3
+      PrimaryPlans Holdback To Value: 4
+      PrimaryPlans WorkOrder Percent Value: 5
+      PrimaryPlans Flat Rate Value: 12
+      PayPlan Employee Name: ADAN C
+      hr-employee-payplan-emp-name: ADAN C
+      PayPlan Employee Lastname: HERNANDEZ
+      hr-employee-payplan-emp-lname: HERNANDEZ
+      manual-appointment-technician: ANDRES NAUFFAL
+      Technician For Manual Appointment: ANDRES NAUFFAL
+      manual-appointment-time-from: '7:00 PM'
+      Time From For Manual Appointment: '7:00 PM'
+      manual-appointment-time-to: '8:00 PM'
+      Time To For Manual Appointment: '8:00 PM'
+      Reports Begin Date: 4/8/2019
+      Reports End Date: 5/8/2019
+      reports-begin-date: 5/23/2010
+      Route Reports Begin Date: 5/23/2019
+      Route Reports End Date: 5/23/2020
+      reportsv2-import-comm-start-date-val: 4/8/2019
+      reportsv2-import-comm-end-date-val: 5/15/2020
+      reportsv2-start-date-val: 4/8/2019
+      reportsv2-end-date: 5/15/2020
+      report-commissions-reports-val: Commissions
+      Reports Value In Commissions: Commissions
+      report-commissions-provider-val: AT&T uVerse Internet
+      Provider Value In Commissions: AT&T uVerse Internet
+      report-commissions-begin-date-val: 5/23/2018
+      Commission Report Begin Date: 5/23/2018
+      report-commissions-end-date-val: 5/23/2020
+      Commission Report End Date: 5/23/2020
+      Logged User: ANDRES NAUFFAL
+      Sample Zip Code Value: 33004
+      Sample Sales Tax Rate: 7.00000 %
+      New Customer Phone Number: 918-302-1215
+      Customer_New_Area: DIRECTV COMMERCIAL
+      Customer_Old_Area: ALLIANCE TECHNOLOGY GROUP
+      Test Customer Id: 30502
+      Customer Lookup All Records: Unlimited
+      New Inventory Area: ALLIANCE TECHNOLOGY GROUP
+      Inventory_Area: ALLIANCE TECHNOLOGY GROUP
+      New Inventory Type: Receiver
+      Inventory_Type: Receiver
+      New Inventory Equipment: 222
+      Inventory_Equipment: 222
+      New Inventory Model: 0183
+      Inventory_Model: 0183
+      New Inventory Receiver Number: R004567890
+      Inventory_Receiver_Number: R004567890
+      New Inventory Card: S004567890123
+      Inventory_Card: S004567890123
+      New Inventory Serial: 8494894
+      Inventory_Serial: 8494894
+      New Vendor Company Name: E2E Vendor
+      New Vendor Street: Test street
+      New Vendor City: New York
+      New Vendor State: FL
+      New Vendor Zip: 90001
+      New Vendor Email: some@vendor.com
+      Quick Transfer From Value: A
+      Quick Transfer To Value: A
+      Quick Transfer From Area Value: 1
+      Quick Transfer To Area Value: 22
+      Quick Transfer Type Value: S
+      Quick Transfer Equipment Value: 342
+      Quick Transfer PO Value: I05120264
+      Area Textbox Value In Admin: E2E Area
+      Area Street Value: Test Street
+      AREA STREET Value: TEST STREET
+      Area City Value: Test City
+      AREA CITY Value: TEST CITY
+      Area State Value: FA
+      Area Zip Value: 90001
+      Area Type Value In Admin: Sales & Inventory
+      Area Warehouse Value In Admin: USE THIS AREA
+      Area Merchant Value: Alliance
+      Area Sales Tax Value: 12
+      Area Timezone Value: Central Time
+      Area Schedule By Value: Technician
+      Area Start Time Value: '11:00 am'
+      Area_Start_Time_Value: '11:00 am'
+      Area Start Time Value Two: '11:00 am'
+      Area End Time Value: '3:00 pm'
+      Area_End_Time_Value: '3:00 pm'
+      Employee Name To Check Area: ADAN C
+      Employee Lastame To Check Area: HERNANDEZ
+      WO_Dropdown_Value: Cancelled Reason
+      WO Cancel Reason Value: E2E Reason
+      Holiday Description: E2E Holiday
+      Holiday Date: 5/30/2040
+      Default Note Type Accounting: Accounting
+      Default Note Type Status: Status
+      admin User Lastname: NAUFFAL
+      admin User Fullname: ANDRES NAUFFAL
+      adminuserfullname: ANDRES NAUFFAL
+      Clock Out Reason End Of Day: End Of Day
+      Role Name: E2E Role
+      Role Description: This role is for testing
+      E2E User Firstname: CARLOS
+      E2E User Lastname: ACOSTA
+      E2E User Fullname: CARLOS ACOSTA
+      Payroll Begin Date: 5/19/2020
+      Run Payroll Begin Date: 10/1/2020
+      Payroll History Begin Date: 5/19/2018
+      Reconcile WorkOrder Number: 31211
+      Commissions Report Begin Date: 11/1/2018
+      E2E Customer Id: 26172
+      New Employee Phone Number: <YYYYMMDDhh>
+      New Employee Username: e2e<YYYYMMDDhh>
+      New Employee Password: Agemni2021
+      Non Existent User: UserDoesntExist
+      Non Existent Password: PWDDoesntExist
+      WorkOrder Number: 31211
+      Not Scheduled WorkOrder Number: 38220
+      Internal Unauthorized Text: >-
+        Please make sure to login and logout of Agemni each time you use it to
+        avoid further timeouts
+    name: dev-remote-vm
+  - type: Staging
+    description: Staging environment for Agemni CMS
+    automated: false
+    endpoints:
+      - URL: 'https://stage.import.agemni.com/dishstar/TempDataForTest/security.asp'
+        type: http
+        credentialsId: admin-TempDataForTest
+        name: TempDataForTest
+      - URL: 'https://stage.import.agemni.com/agemni/security.asp'
+        type: http
+        credentialsId: admin-internal
+        name: internal
+      - URL: 'https://stage.import.agemni.com'
+        type: http
+        name: domain
+      - URL: 'https://stage.import.agemni.com/dishstar/krcomm/security.asp'
+        type: http
+        credentialsId: agsup-krcomm
+        name: krcomm
+      - URL: 'https://stage.import.agemni.com/dishstar/sateo816724/security.asp'
+        type: http
+        credentialsId: agsup-Microcom
+        name: Microcom
+      - name: sqlserver-TempDataForTest
+        ConnectionURL: 'sqlserver://10.187.19.243/TempDataForTest'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-krcomm
+        ConnectionURL: 'sqlserver://10.187.19.243/krcomm'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-Microcom
+        ConnectionURL: 'sqlserver://10.187.19.243/sateo816724'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+    variables:
+      company_name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
+      Company Name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
+      KR Communications Company Name: Agemni CMS - KR Communications
+      Original Company Name: ALLIANCE TECHNOLOGY GROUP
+      Updated Company Name: JUST ANOTHER TECHNOLOGY GROUP
+      Updated Company Name In Welcome Text: Agemni CMS - JUST ANOTHER TECHNOLOGY GROUP
+      unauthorized_text: >-
+        For support questions regarding this Agemni CMS event, please call
+        801-569-9800 Monday - Friday 9 AM - 6 PM MST.
+      Unauthorized Text: >-
+        For support questions regarding this Agemni CMS event, please call
+        801-569-9800 Monday - Friday 9 AM - 6 PM MST.
+      payroll-details-start-date: 4/8/2010
+      wo-number: 123
+      wo-lead-id: 319
+      wo-rep-id: 888
+      wo-kit-id: 2603
+      wo-prom-id: 1583
+      wo-agreement-num: 333
+      wo-selected-wo: null
+      date_time: <YYYYMMDDhhmmss>
+      employee_ceron: CERON
+      int-prom-vendor-val: ATTUVI
+      int-prom-type-val: R
+      int-prom-class-val: OE
+      int-prom-reconc-val: R
+      int-prom-code-val: e2e
+      Receiver Wally: 29
+      Receiver 4K Joey: 84
+      Receiver Joey 20: 86
+      Receiver Genie 2: 96
+      Receiver Hopper Duo: 97
+      Receiver Joey 3: 98
+      int-kits-templates-dvr-val: 2
+      int-kits-templates-hd-val: 3
+      PrimaryPlans Employee Type Value: R
+      PrimaryPlan Emp Type Rep: Rep
+      PrimaryPlans Type Value: Flat Rate
+      PrimaryPlans Type Value In Hidden Field: F
+      hr-primary-plans-type-flat-val: F
+      PrimaryPlans Holdback From Value: 3
+      PrimaryPlans Holdback To Value: 4
+      PrimaryPlans WorkOrder Percent Value: 5
+      PrimaryPlans Flat Rate Value: 12
+      PayPlan Employee Name: ADAN C
+      hr-employee-payplan-emp-name: ADAN C
+      PayPlan Employee Lastname: HERNANDEZ
+      hr-employee-payplan-emp-lname: HERNANDEZ
+      manual-appointment-technician: ANDRES NAUFFAL
+      Technician For Manual Appointment: ANDRES NAUFFAL
+      manual-appointment-time-from: '7:00 PM'
+      Time From For Manual Appointment: '7:00 PM'
+      manual-appointment-time-to: '8:00 PM'
+      Time To For Manual Appointment: '8:00 PM'
+      Reports Begin Date: 4/8/2019
+      Reports End Date: 5/8/2019
+      reports-begin-date: 5/23/2010
+      Route Reports Begin Date: 5/23/2019
+      Route Reports End Date: 5/23/2020
+      reportsv2-import-comm-start-date-val: 4/8/2019
+      reportsv2-import-comm-end-date-val: 5/15/2020
+      reportsv2-start-date-val: 4/8/2019
+      reportsv2-end-date: 5/15/2020
+      report-commissions-reports-val: Commissions
+      Reports Value In Commissions: Commissions
+      report-commissions-provider-val: AT&T uVerse Internet
+      Provider Value In Commissions: AT&T uVerse Internet
+      report-commissions-begin-date-val: 5/23/2018
+      Commission Report Begin Date: 5/23/2018
+      report-commissions-end-date-val: 5/23/2020
+      Commission Report End Date: 5/23/2020
+      Logged User: ANDRES NAUFFAL
+      Sample Zip Code Value: 33004
+      Sample Sales Tax Rate: 7.00000 %
+      New Customer Phone Number: 918-302-1215
+      Customer_New_Area: DIRECTV COMMERCIAL
+      Customer_Old_Area: ALLIANCE TECHNOLOGY GROUP
+      Test Customer Id: 30502
+      Customer Lookup All Records: Unlimited
+      New Inventory Area: ALLIANCE TECHNOLOGY GROUP
+      Inventory_Area: ALLIANCE TECHNOLOGY GROUP
+      New Inventory Type: Receiver
+      Inventory_Type: Receiver
+      New Inventory Equipment: 222
+      Inventory_Equipment: 222
+      New Inventory Model: 0183
+      Inventory_Model: 0183
+      New Inventory Receiver Number: R004567890
+      Inventory_Receiver_Number: R004567890
+      New Inventory Card: S004567890123
+      Inventory_Card: S004567890123
+      New Inventory Serial: 8494894
+      Inventory_Serial: 8494894
+      New Vendor Company Name: E2E Vendor
+      New Vendor Street: Test street
+      New Vendor City: New York
+      New Vendor State: FL
+      New Vendor Zip: 90001
+      New Vendor Email: some@vendor.com
+      Quick Transfer From Value: A
+      Quick Transfer To Value: A
+      Quick Transfer From Area Value: 1
+      Quick Transfer To Area Value: 22
+      Quick Transfer Type Value: S
+      Quick Transfer Equipment Value: 342
+      Quick Transfer PO Value: I05120264
+      Area Textbox Value In Admin: E2E Area
+      Area Street Value: Test Street
+      AREA STREET Value: TEST STREET
+      Area City Value: Test City
+      AREA CITY Value: TEST CITY
+      Area State Value: FA
+      Area Zip Value: 90001
+      Area Type Value In Admin: Sales & Inventory
+      Area Warehouse Value In Admin: USE THIS AREA
+      Area Merchant Value: Alliance
+      Area Sales Tax Value: 12
+      Area Timezone Value: Central Time
+      Area Schedule By Value: Technician
+      Area Start Time Value: '11:00 am'
+      Area_Start_Time_Value: '11:00 am'
+      Area Start Time Value Two: '11:00 am'
+      Area End Time Value: '3:00 pm'
+      Area_End_Time_Value: '3:00 pm'
+      Employee Name To Check Area: ADAN C
+      Employee Lastame To Check Area: HERNANDEZ
+      WO_Dropdown_Value: Cancelled Reason
+      WO Cancel Reason Value: E2E Reason
+      Holiday Description: E2E Holiday
+      Holiday Date: 5/30/2040
+      Default Note Type Accounting: Accounting
+      Default Note Type Status: Status
+      admin User Lastname: NAUFFAL
+      admin User Fullname: ANDRES NAUFFAL
+      adminuserfullname: ANDRES NAUFFAL
+      Clock Out Reason End Of Day: End Of Day
+      Role Name: E2E Role
+      Role Description: This role is for testing
+      E2E User Firstname: CARLOS
+      E2E User Lastname: ACOSTA
+      E2E User Fullname: CARLOS ACOSTA
+      Payroll Begin Date: 5/19/2020
+      Run Payroll Begin Date: 10/1/2020
+      Payroll History Begin Date: 5/19/2018
+      Reconcile WorkOrder Number: 31211
+      Commissions Report Begin Date: 11/1/2018
+      E2E Customer Id: 26172
+      New Employee Phone Number: <YYYYMMDDhh>
+      New Employee Username: e2e<YYYYMMDDhh>
+      New Employee Password: Agemni2021
+      Non Existent User: UserDoesntExist
+      Non Existent Password: PWDDoesntExist
+      WorkOrder Number: 31211
+      Not Scheduled WorkOrder Number: 38220
+      Internal Unauthorized Text: >-
+        Please make sure to login and logout of Agemni each time you use it to
+        avoid further timeouts
+    name: Staging
+  - type: QA
+    description: QA environment for Agemni CMS
+    automated: false
+    endpoints:
+      - URL: 'https://qa.import.agemni.com'
+        type: http
+        name: domain
+      - URL: 'https://qa.import.agemni.com/dishstar/TempDataForTest/security.asp'
+        type: http
+        credentialsId: admin-TempDataForTest
+        name: TempDataForTest
+      - URL: 'https://qa.import.agemni.com/agemni/security.asp'
+        type: http
+        credentialsId: admin-internal
+        name: internal
+      - URL: 'https://qa.import.agemni.com/dishstar/krcomm/security.asp'
+        type: http
+        credentialsId: agsup-krcomm
+        name: krcomm
+      - URL: 'https://qa.import.agemni.com/dishstar/sateo816724/security.asp'
+        type: http
+        credentialsId: agsup-Microcom
+        name: Microcom
+      - name: sqlserver-TempDataForTest
+        ConnectionURL: 'sqlserver://10.187.15.153/TempDataForTest'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-krcomm
+        ConnectionURL: 'sqlserver://10.187.15.153/krcomm'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-Microcom
+        ConnectionURL: 'sqlserver://10.187.15.153/sateo816724'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+    variables:
+      company_name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
+      Company Name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
+      KR Communications Company Name: Agemni CMS - KR Communications
+      Original Company Name: ALLIANCE TECHNOLOGY GROUP
+      Updated Company Name: JUST ANOTHER TECHNOLOGY GROUP
+      Updated Company Name In Welcome Text: Agemni CMS - JUST ANOTHER TECHNOLOGY GROUP
+      unauthorized_text: >-
+        For support questions regarding this Agemni CMS event, please call
+        801-569-9800 Monday - Friday 9 AM - 6 PM MST.
+      Unauthorized Text: >-
+        For support questions regarding this Agemni CMS event, please call
+        801-569-9800 Monday - Friday 9 AM - 6 PM MST.
+      payroll-details-start-date: 4/8/2010
+      wo-number: 123
+      wo-lead-id: 319
+      wo-rep-id: 888
+      wo-kit-id: 2603
+      wo-prom-id: 1583
+      wo-agreement-num: 333
+      wo-selected-wo: null
+      date_time: <YYYYMMDDhhmmss>
+      employee_ceron: CERON
+      int-prom-vendor-val: ATTUVI
+      int-prom-type-val: R
+      int-prom-class-val: OE
+      int-prom-reconc-val: R
+      int-prom-code-val: e2e
+      Receiver Wally: 29
+      Receiver 4K Joey: 84
+      Receiver Joey 20: 86
+      Receiver Genie 2: 96
+      Receiver Hopper Duo: 97
+      Receiver Joey 3: 98
+      int-kits-templates-dvr-val: 2
+      int-kits-templates-hd-val: 3
+      PrimaryPlans Employee Type Value: R
+      PrimaryPlan Emp Type Rep: Rep
+      PrimaryPlans Type Value: Flat Rate
+      PrimaryPlans Type Value In Hidden Field: F
+      hr-primary-plans-type-flat-val: F
+      PrimaryPlans Holdback From Value: 3
+      PrimaryPlans Holdback To Value: 4
+      PrimaryPlans WorkOrder Percent Value: 5
+      PrimaryPlans Flat Rate Value: 12
+      PayPlan Employee Name: ADAN C
+      hr-employee-payplan-emp-name: ADAN C
+      PayPlan Employee Lastname: HERNANDEZ
+      hr-employee-payplan-emp-lname: HERNANDEZ
+      manual-appointment-technician: ANDRES NAUFFAL
+      Technician For Manual Appointment: ANDRES NAUFFAL
+      manual-appointment-time-from: '7:00 PM'
+      Time From For Manual Appointment: '7:00 PM'
+      manual-appointment-time-to: '8:00 PM'
+      Time To For Manual Appointment: '8:00 PM'
+      Reports Begin Date: 4/8/2019
+      Reports End Date: 5/8/2019
+      reports-begin-date: 5/23/2010
+      Route Reports Begin Date: 5/23/2019
+      Route Reports End Date: 5/23/2020
+      reportsv2-import-comm-start-date-val: 4/8/2019
+      reportsv2-import-comm-end-date-val: 5/15/2020
+      reportsv2-start-date-val: 4/8/2019
+      reportsv2-end-date: 5/15/2020
+      report-commissions-reports-val: Commissions
+      Reports Value In Commissions: Commissions
+      report-commissions-provider-val: AT&T uVerse Internet
+      Provider Value In Commissions: AT&T uVerse Internet
+      report-commissions-begin-date-val: 5/23/2018
+      Commission Report Begin Date: 5/23/2018
+      report-commissions-end-date-val: 5/23/2020
+      Commission Report End Date: 5/23/2020
+      Logged User: ANDRES NAUFFAL
+      Sample Zip Code Value: 33004
+      Sample Sales Tax Rate: 7.00000 %
+      New Customer Phone Number: 918-302-1215
+      Customer_New_Area: DIRECTV COMMERCIAL
+      Customer_Old_Area: ALLIANCE TECHNOLOGY GROUP
+      Test Customer Id: 30502
+      Customer Lookup All Records: Unlimited
+      New Inventory Area: ALLIANCE TECHNOLOGY GROUP
+      Inventory_Area: ALLIANCE TECHNOLOGY GROUP
+      New Inventory Type: Receiver
+      Inventory_Type: Receiver
+      New Inventory Equipment: 222
+      Inventory_Equipment: 222
+      New Inventory Model: 0183
+      Inventory_Model: 0183
+      New Inventory Receiver Number: R004567890
+      Inventory_Receiver_Number: R004567890
+      New Inventory Card: S004567890123
+      Inventory_Card: S004567890123
+      New Inventory Serial: 8494894
+      Inventory_Serial: 8494894
+      New Vendor Company Name: E2E Vendor
+      New Vendor Street: Test street
+      New Vendor City: New York
+      New Vendor State: FL
+      New Vendor Zip: 90001
+      New Vendor Email: some@vendor.com
+      Quick Transfer From Value: A
+      Quick Transfer To Value: A
+      Quick Transfer From Area Value: 1
+      Quick Transfer To Area Value: 22
+      Quick Transfer Type Value: S
+      Quick Transfer Equipment Value: 342
+      Quick Transfer PO Value: I05120264
+      Area Textbox Value In Admin: E2E Area
+      Area Street Value: Test Street
+      AREA STREET Value: TEST STREET
+      Area City Value: Test City
+      AREA CITY Value: TEST CITY
+      Area State Value: FA
+      Area Zip Value: 90001
+      Area Type Value In Admin: Sales & Inventory
+      Area Warehouse Value In Admin: USE THIS AREA
+      Area Merchant Value: Alliance
+      Area Sales Tax Value: 12
+      Area Timezone Value: Central Time
+      Area Schedule By Value: Technician
+      Area Start Time Value: '11:00 am'
+      Area_Start_Time_Value: '11:00 am'
+      Area Start Time Value Two: '11:00 am'
+      Area End Time Value: '3:00 pm'
+      Area_End_Time_Value: '3:00 pm'
+      Employee Name To Check Area: ADAN C
+      Employee Lastame To Check Area: HERNANDEZ
+      WO_Dropdown_Value: Cancelled Reason
+      WO Cancel Reason Value: E2E Reason
+      Holiday Description: E2E Holiday
+      Holiday Date: 5/30/2040
+      Default Note Type Accounting: Accounting
+      Default Note Type Status: Status
+      admin User Lastname: NAUFFAL
+      admin User Fullname: ANDRES NAUFFAL
+      adminuserfullname: ANDRES NAUFFAL
+      Clock Out Reason End Of Day: End Of Day
+      Role Name: E2E Role
+      Role Description: This role is for testing
+      E2E User Firstname: CARLOS
+      E2E User Lastname: ACOSTA
+      E2E User Fullname: CARLOS ACOSTA
+      Payroll Begin Date: 5/19/2020
+      Run Payroll Begin Date: 10/1/2020
+      Payroll History Begin Date: 5/19/2018
+      Reconcile WorkOrder Number: 31211
+      Commissions Report Begin Date: 11/1/2018
+      E2E Customer Id: 26172
+      New Employee Phone Number: <YYYYMMDDhh>
+      New Employee Username: e2e<YYYYMMDDhh>
+      New Employee Password: Agemni2021
+      Non Existent User: UserDoesntExist
+      Non Existent Password: PWDDoesntExist
+      WorkOrder Number: 31211
+      Not Scheduled WorkOrder Number: 38220
+      Internal Unauthorized Text: >-
+        Please make sure to login and logout of Agemni each time you use it to
+        avoid further timeouts
+    name: QA
 selectors:
   - selectors:
       username: '//*[@id="user"]'
