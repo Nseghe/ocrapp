@@ -7,10 +7,6 @@ environments:
         type: http
         credentialsId: admin-TempDataForTest
         name: TempDataForTest
-      - name: sqlserver-TempDataForTest
-        ConnectionURL: 'sqlserver://10.187.19.243/TempDataForTest'
-        credentialsId: SQL-Credentials
-        type: sqlserver
     variables:
       Cell Phone Number: 9998887777
       Activation Date: 03/09/2021
@@ -1585,11 +1581,3 @@ credentials:
     username: admin
     password: Agemni2021
     id: admin-TempDataForTest
-  - type: basic
-    username: agsup
-    password: Agemni2022
-    id: agsup-TempDataForTest
-  - type: basic
-    username: development
-    password: zdt67IL
-    id: SQL-Credentials
