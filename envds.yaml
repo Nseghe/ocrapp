@@ -1,20 +1,4 @@
 environments:
-  - type: Dev
-    description: Fix QA environment
-    automated: false
-    endpoints:
-      - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/TempDataForTest/security.asp'
-        type: http
-        credentialsId: admin-TempDataForTest
-        name: TempDataForTest
-      - name: sqlserver-TempDataForTest
-        ConnectionURL: 'sqlserver://10.187.19.243/TempDataForTest'
-        credentialsId: SQL-Credentials
-        type: sqlserver
-    variables:
-      Cell Phone Number: 9998887777
-      Activation Date: 03/09/2021
-    name: dev-AGEMCMS-8521
   - type: Prod
     description: Production environment
     automated: false
@@ -182,6 +166,22 @@ environments:
         Please make sure to login and logout of Agemni each time you use it to
         avoid further timeouts
     name: Production
+  - type: Dev
+    description: Fix QA environment
+    automated: false
+    endpoints:
+      - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/TempDataForTest/security.asp'
+        type: http
+        credentialsId: admin-TempDataForTest
+        name: TempDataForTest
+      - name: sqlserver-TempDataForTest
+        ConnectionURL: 'sqlserver://10.187.19.243/TempDataForTest'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+    variables:
+      Cell Phone Number: 9998887777
+      Activation Date: 03/09/2021
+    name: dev-AGEMCMS-8521
   - type: Dev
     description: Dev environment
     automated: false
