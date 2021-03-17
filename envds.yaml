@@ -3,22 +3,26 @@ environments:
     description: Fix QA environment
     automated: false
     endpoints:
-      - URL: 'https://agemni-cms-pr-42.import.agemni.com'
-        type: http
-        name: domain
       - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/TempDataForTest/security.asp'
         type: http
         credentialsId: admin-TempDataForTest
+        name: AGEMCMS-8521
+      - URL: 'https://qa.import.agemni.com'
+        type: http
+        name: domain
+      - URL: 'https://qa.import.agemni.com/dishstar/TempDataForTest/security.asp'
+        type: http
+        credentialsId: admin-TempDataForTest
         name: TempDataForTest
-      - URL: 'https://agemni-cms-pr-42.import.agemni.com/agemni/security.asp'
+      - URL: 'https://qa.import.agemni.com/agemni/security.asp'
         type: http
         credentialsId: admin-internal
         name: internal
-      - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/krcomm/security.asp'
+      - URL: 'https://qa.import.agemni.com/dishstar/krcomm/security.asp'
         type: http
         credentialsId: agsup-krcomm
         name: krcomm
-      - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/sateo816724/security.asp'
+      - URL: 'https://qa.import.agemni.com/dishstar/sateo816724/security.asp'
         type: http
         credentialsId: agsup-Microcom
         name: Microcom
