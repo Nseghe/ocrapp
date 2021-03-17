@@ -3,10 +3,37 @@ environments:
     description: Fix QA environment
     automated: false
     endpoints:
+      - URL: 'https://agemni-cms-pr-42.import.agemni.com'
+        type: http
+        name: domain
       - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/TempDataForTest/security.asp'
         type: http
         credentialsId: admin-TempDataForTest
         name: TempDataForTest
+      - URL: 'https://agemni-cms-pr-42.import.agemni.com/agemni/security.asp'
+        type: http
+        credentialsId: admin-internal
+        name: internal
+      - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/krcomm/security.asp'
+        type: http
+        credentialsId: agsup-krcomm
+        name: krcomm
+      - URL: 'https://agemni-cms-pr-42.import.agemni.com/dishstar/sateo816724/security.asp'
+        type: http
+        credentialsId: agsup-Microcom
+        name: Microcom
+      - name: sqlserver-TempDataForTest
+        ConnectionURL: 'sqlserver://10.187.15.153/TempDataForTest'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-krcomm
+        ConnectionURL: 'sqlserver://10.187.15.153/krcomm'
+        credentialsId: SQL-Credentials
+        type: sqlserver
+      - name: sqlserver-Microcom
+        ConnectionURL: 'sqlserver://10.187.15.153/sateo816724'
+        credentialsId: SQL-Credentials
+        type: sqlserver
     variables:
       company_name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
       Company Name: Agemni CMS - ALLIANCE TECHNOLOGY GROUP
