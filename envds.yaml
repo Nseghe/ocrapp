@@ -193,3 +193,1624 @@ environments:
         Please make sure to login and logout of Agemni each time you use it to
         avoid further timeouts
     name: devhub-AGEMCMS-8521
+selectors:
+  - selectors:
+      username: '//*[@id="user"]'
+      Username Textbox: '//*[@id="user"]'
+      password: '//*[@id="pw"]'
+      Password Textbox: '//*[@id="pw"]'
+      submit-login: '//*[@id="LoginBox"]/form/button'
+      Login Button: '//*[@id="LoginBox"]/form/button'
+      Login Header Text: '//h2[text()="Login"]'
+      Invalid username or password Text: '//span[text()="Invalid username or password."]'
+      User must have area rights to login Text: >-
+        //span[text()="User must have area rights to login.  Please notify your
+        administrator."]
+    name: Login
+  - selectors:
+      Terms Of Use Agree Button: '//*[@name="btnAgree"]'
+      Terms Of Use I agree Checkbox: '//*[@id="chkAgree"]'
+      Terms Of Use Continue Button: '//*[@id="btnAgree"]'
+    name: Terms Of Use
+  - selectors:
+      Page Header: //html//head
+      welcome-text: >-
+        /html/body/table[1]/tbody/tr[1]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]
+      Welcome Text: >-
+        /html/body/table[1]/tbody/tr[1]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]
+      Company Name In Page Header: >-
+        /html/body/table[1]/tbody/tr[1]/td/table/tbody/tr/td[2]/table/tbody/tr/td[1]
+      Company Name section in Page Header: >-
+        //tr[@class='background']//table/tbody[1]/tr[1]/td[contains(text(),'Agemni
+        CMS - ALLIANCE TECHNOLOGY GROUP')]
+      Page Body: //html//body
+      Home Frame Header:
+        - '//iframe[@id=''HomeFrame'']'
+        - //html//head
+      Home Frame Body:
+        - '//iframe[@id=''HomeFrame'']'
+        - //html//body
+      Customers Tab: '//*[@id="tab_2"]/a'
+      Lookup Button Under Customers Tab: '//*[@id="tab-2"]/li[1]/a'
+      New Customer Under Customers Tab: '//*[@id="tab-2"]/li[2]/a'
+      <WIZARD_TAB_NAME> Name:
+        - '//iframe[@id=''appFrame'']'
+        - '//a[text()=$WIZARD_TAB_NAME]'
+      <WIZARD_TAB_NAME> Delete:
+        - '//iframe[@id=''appFrame'']'
+        - '//a[text()=$WIZARD_TAB_NAME]//ancestor::li//*[contains(@id,''Delete'')]'
+      Record Per Page:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//*[@name=''ImportTemplate_table_length'']'
+      Scheduler Under Customers Tab: '//*[@id="tab-2"]/li[5]/a'
+      home-reports: '//*[@id="tab_5"]/a/span'
+      Reports Tab: '//*[@id="tab_5"]/a/span'
+      Status Button Under Reports Tab: '//*[@id="tab-5"]/li[7]/a'
+      All Statuses Submenu Item: '//*[@id="tab-5"]/li[7]/ul/li[1]/a'
+      Completed Submenu Item: '//tbody/tr[2]/td[1]/div[1]/ul[7]/li[7]/ul[1]/li[5]/a[1]'
+      Payroll Button Under Reports: '//*[@id="tab-5"]/li[5]/a'
+      Export Button Under Reports: '//*[@id="tab-5"]/li[12]/a'
+      Holdback Maturity Submenu Item: '//*[@id="tab-5"]/li[5]/ul/li[2]/a'
+      Check History Submenu Item: '//*[@id="tab-5"]/li[5]/ul/li[1]/a'
+      Other Menu In Reports: '//*[@id="tab-5"]/li[4]/a'
+      User Audit Log Submenu Item: '//*[@id="tab-5"]/li[4]/ul/li[19]/a'
+      home-reports-commissions: '//*[@id="tab-5"]/li[1]/a'
+      Commissions Menu In Reports: '//*[@id="tab-5"]/li[1]/a'
+      home-reports-commissions-commissions: '//*[@id="tab-5"]/li[1]/ul/li[2]/a'
+      Commissions Submenu Item: '//*[@id="tab-5"]/li[1]/ul/li[2]/a'
+      Deactivations Submenu Item: '//*[@id="tab-5"]/li[1]/ul/li[4]/a'
+      home-reports-technician: '//*[@id="tab-5"]/li[8]/a'
+      Technician Menu: '//*[@id="tab-5"]/li[8]/a'
+      home-reports-technician-routes: '//*[@id="tab-5"]/li[8]/ul/li[9]/a'
+      Routes Submenu Item: '//*[@id="tab-5"]/li[8]/ul/li[9]/a'
+      Leads Tab: '//*[@id="tab_1"]/a'
+      Wizard under Leads Tab: '//*[@id="tab-1"]/li[5]/a'
+      Add New Tab button under Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//input[@name=''BAddNewTab'' and @value=''Add New Tab'']'
+      Tab Name input under Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//input[@name=''TTabName'']'
+      Modules tab under Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//table//td[@id=''Tab_Draggables_1'']//a[text()=''Modules'']'
+      Areas module under Modules in Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//div[@class=''draggableElement'']//*//td[contains(text(), ''Areas'')]'
+      Lead Rep module under Modules in Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//div[@class=''draggableElement'']//*//td[contains(text(), ''Lead Rep'')]'
+      Drag and Drop panel 1 under Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//table//*//td//ul[@id=''UL_cc1'']'
+      Update Tab button under Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//input[@name=''BUpdateTab'' and @value=''Update'']'
+      Delete wizard link under Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//div[@id=''DivTabNameDelete1'']//a'
+      Current Tab Name in Wizard:
+        - '//iframe[@id=''appFrame'']'
+        - '//div[@id=''DivTabName1'']//a'
+      Lead Script under Leads Tab: '//*[@id="tab-1"]/li[4]/a'
+      Tab Name in Lead Script:
+        - '//iframe[@id=''appFrame'']'
+        - >-
+          //td[contains(@id,'scripts_list_Link_Script1_tabtable') and
+          contains(text(),'TEST WIZARD TAB')]
+      home-reportsv2: '//*[@id="tab_6"]/a'
+      Reports V2 Tab: '//*[@id="tab_6"]/a'
+      Payroll Under Reports Reports V2 Tab: '//*[@id="tab-6"]/li[3]/a'
+      Payroll V2 Payroll Details Submenu Item: '//*[@id="tab-6"]/li[3]/ul/li[1]/a'
+      Report Header:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//div[@id=''reportSelect'']'
+      home-reportsv2-employees: '//*[@id="tab-6"]/li[7]/a/span[2]'
+      Employees Button Under Reports V2: '//*[@id="tab-6"]/li[7]/a/span[2]'
+      home-reportsv2-employees-hr: '//*[@id="tab-6"]/li[7]/ul/li/a'
+      HR Details Submenu Item: '//*[@id="tab-6"]/li[7]/ul/li/a'
+      home-reportsv2-payroll-details: '//*[@id="tab-6"]/li[3]/ul/li[1]/a'
+      home-reportsv2-commissions: '//*[@id="tab-6"]/li[1]/a'
+      home-reportsv2-received-commissions: '//*[@id="tab-6"]/li[1]/ul/li[2]/a[text()="Received Commissions"]'
+      home-reportsv2-production: '//*[@id="tab-6"]/li[2]/a/span[2]'
+      Production Menu: '//*[@id="tab-6"]/li[2]/a/span[2]'
+      Production By Date Details Submenu Item: '//*[@id="tab-6"]/li[2]/ul/li[1]/a'
+      home-reportsv2-production-by-date-details: '//*[@id="tab-6"]/li[2]/ul/li[1]/a'
+      home-admin: '//*[@id="tab_7"]/a'
+      Admin Tab: '//*[@id="tab_7"]/a'
+      Home Tab: '//span[@class="tabText" and text()="Home"]/..'
+      My Account Button: '//span[@class="sf-label-submenu" and text()="My Account"]/..'
+      My Account Username Field: '//td[text()="Username:"]/../td/b[text()="david"]'
+      My Account Firstname Field: '//td/label[@for="txtFName"]/../../td/input[@value="DAVID"]'
+      My Account Lastname Field: '//td/label[@for="txtLName"]/../../td/input[@value="POPIASHVILI"]'
+      My Account Email Field: >-
+        //td/label[@for="txtEmail"]/../../td/input[@value="david.popiashvili@aurea.com"]
+      Import Menu under Admin: '//span[contains(text(),''Import'') and @class=''sf-label-submenu'']'
+      Providers Button Under Admin Tab: '//*[@id="tab-7"]/li[3]/a'
+      Areas Button: '//*[@id="tab-7"]/li[2]/a'
+      Areas Submenu Item: '//*[@id="tab-7"]/li[2]/ul/li[1]/a'
+      Commissions Button Under Admin Tab: '//*[@id="tab-7"]/li[6]/a'
+      Expected Commissions Submenu Item: '//*[@id="tab-7"]/li[6]/ul/li[5]/a'
+      home-admin-import: '//*[@id="tab-7"]/li[8]/ul/li[1]/a'
+      home-admin-import-template-lib: '//*[@id="tab-7"]/li[8]/ul/li[2]/a'
+      Import Template Library Submenu: '//a[contains(text(),''Import Template Library'')]'
+      home-admin-update: '//*[@id="tab-7"]/li[1]/ul/li[7]/a'
+      Update Submenu Item: '//*[@id="tab-7"]/li[1]/ul/li[7]/a'
+      home-admin-promotions: '//*[@id="tab-7"]/li[4]/a'
+      Promotions: '//*[@id="tab-7"]/li[5]/a'
+      Lead Tab: '//a[@href=''#tab-1'']'
+      New Lead Button: '//a[contains(@href, ''import.agemni.com/cms/leads.asp?which=leadcenter'')]'
+      New Lead Button New: '//a[contains(@href,''leads.asp'')]'
+      home-hr: '//*[@id="tab_4"]/a/span'
+      HR Tab: '//*[@id="tab_4"]/a/span'
+      HR Tab name: '//span[contains(text(),''HR'')]'
+      New User Button: '//*[@id="tab-4"]/li[2]/a'
+      Time Cards Button: '//*[@id="tab-4"]/li[8]/a'
+      Time Card Management Submenu Item: '//a[contains(text(), "Time Card Management")]'
+      Roles Button: '//*[@id="tab-4"]/li[3]/a'
+      Roles option: '//span[@class=''sf-ico-submenu ico-reviewer'']'
+      Roles Submenu Item: '//*[@id="tab-4"]/li[3]/ul/li[1]/a'
+      User Roles Submenu Item: '//*[@id="tab-4"]/li[3]/ul/li[3]/a'
+      Payroll Button: '//*[@id="tab-4"]/li[5]/a'
+      Payroll Submenu Item: '//*[@id="tab-4"]/li[5]/ul/li[1]/a'
+      Payroll History Submenu Item: '//*[@id="tab-4"]/li[5]/ul/li[3]/a'
+      User Payroll Mgmt Submenu Item: '//*[@id="tab-4"]/li[5]/ul/li[4]/a'
+      Inventory Tab: '//*[@id="tab_3"]/a'
+      Add Inventory Button: '//*[@id="tab-3"]/li[4]/a'
+      Equipment Button: '//*[@id="tab-3"]/li[1]/a'
+      Equipment Submenu Item: '//*[@id="tab-3"]/li[1]/ul/li[1]/a'
+      Inventory Lookup Button: '//*[@id="tab-3"]/li[9]/a'
+      Inventory Transfer Button: '//*[@id="tab-3"]/li[7]/a'
+      Quick Transfer Submenu Item: '//*[@id="tab-3"]/li[7]/ul/li[2]/a'
+      home-hr-payplans: '//*[@id="tab-4"]/li[4]/a/span[2]'
+      Payplans Menu: '//*[@id="tab-4"]/li[4]/a'
+      Pay plans Menu: '//*[@id="tab-4"]/li[4]/a'
+      Rule Plan Mgmt Submenu Item: '//*[@id="tab-4"]/li[4]/ul/li[4]/a'
+      Rule Plan Mgmt Submenu: '//a[contains(text(),''Rule Plan Mgmt'')]'
+      Primary PayPlans Submenu Item: '//*[@id="tab-4"]/li[4]/ul/li[1]/a'
+      home-hr-payplans-primary-plans: '//*[@id="tab-4"]/li[4]/ul/li[1]/a'
+      home-logout: '//a[@title="Logout"]'
+      Logout Button: '//a[@title="Logout"]'
+      Commissions Menu: '//*[@id="tab-6"]/li[1]/a'
+      Received Commissions submenu item: '//*[@id="tab-6"]/li[1]/ul/li[2]/a[text()="Received Commissions"]'
+      Clock In Link:
+        - '//iframe[@id=''HomeFrame'']'
+        - '//a[contains(., ''Clock In'')]'
+      Clock Out Reason Dropdown:
+        - '//iframe[@id=''HomeFrame'']'
+        - '//select[@name=''clockOutReason'']'
+      Clock Out Button:
+        - '//iframe[@id=''HomeFrame'']'
+        - '//button[contains(., ''Clock Out'')]'
+    name: Home
+  - selectors:
+      Scheduler Search Header: '//td[text()=''Scheduler'']'
+      Area Dropdown: '//select[@name=''cmbArea'']'
+      Tech Dropdown: '//select[@name=''cmbTech'']'
+      Start Day Textbox: '//input[@id=''txtStartDate'']'
+      Go Button: '//input[@id=''Submit1'']'
+      Tech Appointment: '//tr[@class=''schedule'']'
+      Scheduled Appointments in Schedule Var appointmentDateMD: >-
+        //font[contains(text(),
+        $appointmentDateMD)]/ancestor::td[3]//tr[@class='schedule']
+    name: Customers - Scheduler
+  - selectors:
+      First field in New User form: '//input[@id=''txtFName'']'
+      Last field in New User form: '//input[@id=''txtLName'']'
+      Phone in New User form: '//input[@id=''txtPhone'']'
+      Active checkbox field in New User form: '//input[@id=''txtActive'']'
+      Add button in New User form: '//input[@name=''btnAdd'']'
+    name: Home - HR - New User
+  - selectors:
+      Quick Transfer Equipment Text: '//td[contains(text(), "Quick Transfer Equipment")]'
+      Quick Transfer From: '//*[@id="cmbFrom"]'
+      Quick Transfer To: '//*[@id="cmbTo"]'
+      Quick Transfer From Area: '//*[@id="cmbArea"]'
+      Quick Transfer To Area: '//*[@id="cmbTransferTo"]'
+      Quick Transfer Type: '//*[@id="cmbEqType"]'
+      Quick Transfer Equipment: '//*[@id="cmbEquipment"]'
+      Quick Transfer Submit Button: '//*[@id="Submit1"]'
+      Quick Transfer Check All Button: '//input[@type="button" and @value="ca"]'
+      Quick Transfer PO: '//select[@name="cmbPONumber"]'
+      Items To Quick Transfer: '//td[text()=''Transfer'']//ancestor::table'
+      Quick Transfer To CORNERSTONE: '//select[@id="cmbTransferTo"]/option[contains(text(), "CORNERSTONE")]'
+    name: Inventory - Quick Transfer
+  - selectors:
+      Add Equipment Text Message: '//td[text()="Add Equipment"]'
+      Inventory Area: '//*[@id="cmbArea"]'
+      New Inventory Area: '//*[@id=''cmbArea'']/option[contains(text(),$Inventory_Area)]'
+      Inventory Equipment Type: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[4]/select'
+      New Inventory Type: '//select[@name=''cmbType'']//option[contains(text(),$Inventory_Type)]'
+      New Inventory Equipment: '//*[@id=''cmbEquipment'']/option[contains(text(),$Inventory_Equipment)]'
+      Inventory Equipment: '//*[@id="cmbEquipment"]'
+      Inventory PO: '//*[@id="cmbPO"]'
+      Inventory Model: '//*[@id="txtProductData"]'
+      Inventory Receiver Number: '//*[@id="txtReceiverNum"]'
+      Inventory Card Number: '//*[@id="txtCardNum"]'
+      Inventory Serial Number: '//*[@id="txtSerialNumber"]'
+      Add Inventory: '//input[@name="btnAdd"]'
+      Created Inventory: '//td[contains(text(), $Inventory_Receiver_Number)]'
+      Created Inventory Link: >-
+        //*[@id="ie6-container-wrap"]/table[3]/tbody/tr[3]/td[1]/a[contains(text(),
+        "222")]
+      Delete Button For Receiver R004567890: >-
+        //*[@id="ie6-container-wrap"]/table[3]/tbody/tr[3]/td[1]/a[contains(text(),
+        "222")]/parent::td/parent::tr/td[11]/a
+      Delete Icon For Created Inventory: >-
+        //*[@id="ie6-container-wrap"]/table[3]/tbody/tr[3]/td[1]/a[contains(text(),
+        $Inventory_Equipment)]/parent::td/parent::tr/td[11]/a
+      RMA Button For Created Equipment: >-
+        //*[@id="ie6-container-wrap"]/table[3]/tbody/tr[3]/td[1]/a[contains(text(),
+        "222")]/parent::td/parent::tr/td[10]/input[@name="btnRMA"]
+      RMA Button: '//a/span[text()=''RMA'']'
+      RMA Lookup Submenu Item: '//ul//a[text()=''Lookup'']'
+      RMA Receiver Number: '//input[@name="txtPrimaryNum"]'
+      RMA Lookup Button: '//*[@id="2ndopenformtable"]/tbody/tr[3]/td[7]/input'
+      <Receiver_Number> Name: '//td[contains(text(), $Receiver_Number)]'
+      <Receiver_Number> Delete: '//td[contains(text(), $Receiver_Number)]//parent::tr//b[@id="delete"]'
+      <Receiver_Number> Deletes: '//td[contains(text(), $Receiver_Number)]/parent::tr/td[14]/a'
+      Receiver R004567890 In RMA Lookup: '//td[contains(text(), "R004567890")]'
+      Delete RMA Receiver Button: '//td[contains(text(), "R004567890")]/parent::tr/td[14]/a'
+      Inventory Button In Move To Column: '//*[@id="ie6-container-wrap"]/table[4]/tbody/tr[3]/td[13]/input'
+      Yes button: '//input[@name=''btnYes'']'
+      ALLIANCE TECHNOLOGY GROUP Option: '//option[@value=''1'']'
+      Receiver Option: '//option[@value=''Receiver'']'
+      Receiver Number In RMA Lookup: '//td[contains(text(), $inventoryReceiverNumber)]'
+    name: Inventory - Add
+  - selectors:
+      Equipment Text Message: '//td[contains(text(), "Equipment")]'
+      Vendors Button In Equipment: '//*[@id="btnVendors"]'
+      Created Vendor In Equipment: '//option[text()="E2E Vendor"]'
+      <Vendor_Name> In Equipment: '//option[text()=$Vendor_Name]'
+    name: Inventory - Equipment
+  - selectors:
+      Equipment Vendors Text: '//td[contains(text(), "Equipment Vendors")]'
+      Vendor Company Name: '//*[@id="Text1"]'
+      Vendor Active Checkbox: '//input[@name="chkActive"]'
+      Vendor Active Checkbox Checked: '//input[@name="chkActive" and @checked]'
+      Vendor Street: '//*[@id="Text3"]'
+      Vendor City: '//*[@id="Text5"]'
+      Vendor State: '//*[@id="Text7"]'
+      Vendor Zip: '//*[@id="Text8"]'
+      Vendor Email: '//*[@id="txtEmail"]'
+      Windstream Provider Checkbox: '//input[@name="chkProvWINDTML"]'
+      Windstream Provider Checkbox Checked: '//input[@name="chkProvWINDTML" and @checked]'
+      Add Vendor Button: '//input[@name="btnAdd"]'
+      Created Vendor Link: '//a[text()="E2E Vendor"]'
+      Created Vendor Company Link: '//a[contains(text(),$VendorCompanyName)]'
+      <Vendor_Name> Link: '//a[text()=$Vendor_Name]'
+      Delete Button in <Vendor_Name> Row: '//a[text()=$Vendor_Name]/parent::td/parent::tr/td[10]/a'
+      Created Vendor Delete Button: '//a[text()="E2E Vendor"]/parent::td/parent::tr/td[10]/a'
+      Delete Icon For Created Vendor Name: '//a[text()=$VendorCompanyName]/parent::td/parent::tr/td[10]/a'
+      Vendor Update Button: '//*[@id="Submit1"]'
+      Inactive Link In Vendors: '//a[text()="Inactive"]'
+      Back To Equipment Link: '//a[contains(text(), "<< Back to Equipment")]'
+    name: Inventory - Equipment Vendors
+  - selectors:
+      Equipment Lookup Text: '//td[contains(text(), "Equipment Lookup")]'
+      Rcvr Number Textbox In Equipment Lookup: '//*[@id="Text1"]'
+      Go Button In Equipment Lookup: '//*[@id="Submit1"]'
+      RMA Button In Equipment Lookup: '//input[@name="btnRMA"]'
+      RMA Link Between Lookup And Shipments: '//a[@href="returnauthorization.asp?which=inventory"]'
+      Rcvr/Card/Ser Textbox: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[2]/input'
+    name: Inventory - Lookup
+  - selectors:
+      customers-lookup: '//*[@id="tab-2"]/li[1]/a'
+      Customers Lookup: '//*[@id="tab-2"]/li[1]/a'
+      Customers Lookup option: >-
+        //ul[@class='sf-menu ui-tabs-panel ui-widget-content ui-corner-bottom
+        sf-js-enabled
+        sf-shadow']//span[@class='sf-label-submenu'][contains(text(),'Lookup')]
+      First Customer From The List: '//*[@id="Table1"]/tbody/tr[3]/td[2]/a'
+      Work Order Number: >-
+        //*[@id="tblInvoiceData"]/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td[1]
+      Reconcile Button In Customer Page: '//input[@type="button" and @name="btnReconcile"]'
+      Edit button: '//input[@type=''button'' and @value=''Edit'']'
+      Explaination textbox input field: '//input[@id=''txtCommAdd'']'
+      Amount textbox input field: '//input[@id=''txtCommAmtAdd'']'
+      Add button in Reconcile Commissions popup window: '//input[@type="submit" and @name="btnAddComm"]'
+      A new *$35 commission entry with the entered text added to the table: '//td[contains(text(),''$35'')]'
+      <Explaination> of *$35 New: >-
+        //*[contains(text(),$Explaination)]//parent::tr//*[contains(text(),'$35')]
+      Amount text field for Explanation: '//input[@value=$Explaination]/following::td[1]/input'
+      Explanation with new Amount: >-
+        //*[contains(text(),$Explaination)]//parent::tr//*[contains(text(),$Amount)]
+      Delete mark for Explanation: >-
+        //input[@value=$Explaination]/following::td[1]/input/following::td[1]/a/b
+      'WO# Textbox': '//*[@id="Text8"]'
+      'WO# input in Customer Lookup': '//input[@name="txtInvoiceNum"]'
+      Payroll button in customer page: '//input[@name="btnPayroll" and @value="Payroll"]'
+      Customer Lookup caption: '//span[@id="lookupCaption"]'
+      Edit Preferences Under Work Order Number: '//*[@id="divInvoicesPrefsLink"]/td/a'
+      Custom Checkboxes In WorkOrder Preferences: '//*[@id="invoiceCustomMenuItem"]'
+      Custom Checkbox Name On Line 15: '//*[@id="txtCustomCheckbox15Name"]'
+      Custom Checkbox On Line 15: '//*[@id="chkDisplayCustomCheckbox15"]'
+      Work Order Preferences Update Button: '//*[@id="invoiceUpdate"]/td/input'
+      Checkboxes Tab At Top Right Side Of The Screen: '//*[@id="checkboxesInvoiceMenuItem"]'
+      Test Field Checkbox: '//td[contains(., "Test Field")]/input[@id="chkCustomCheckbox15"]'
+      Second Rep For Work Order: '//*[@id="divrep2"]/select[@name="cmbRepID2"]'
+      Second Rep Dropdown Under Work Order: '//*[@id="divrep2"]/select[@name="cmbRepID2"]'
+      Work Order Reps: '//*[@id="cmbInvoiceReps"]'
+      Reps per invoice Dropdown: '//*[@id="cmbInvoiceReps"]'
+      Reps per invoice value 3: '//*[@id=''cmbInvoiceReps'']/option[text()=''3'']'
+      Reps per invoice value 2: '//*[@id=''cmbInvoiceReps'']/option[text()=''2'']'
+      Reps per invoice value 1: '//*[@id=''cmbInvoiceReps'']/option[text()=''1'']'
+      customers-lookup-first-customer: '//*[@id="Table1"]/tbody/tr[3]/td[2]/a'
+      First Customer In Customer Lookup: '//*[@id="Table1"]/tbody/tr[3]/td[2]/a'
+      Customer WorkOrder: '//*[@id="cmbInvoiceID"]'
+      WorkOrder Dropdown Menu: '//*[@id="cmbInvoiceID"]'
+      WorkOrder value New: '//select[@name=''cmbInvoiceID'']/option[(text()=''New'')]'
+      AT&T Mobility value in Provider dropdown menu: '//select[@name=''cmbSatelliteProvider'']/option[text()=''AT&T Mobility'']'
+      E2E Test Provider value in Provider dropdown menu: >-
+        //select[@name='cmbSatelliteProvider']/option[text()='E2E Test
+        Provider']
+      Customer Work Order Dropdown Menu: '//*[@id="cmbInvoiceID"]'
+      customer-workorder: '//*[@id="cmbInvoiceID"]'
+      customer-wo-workorder: '//*[@id="cmbInvoiceID"]'
+      Customer Work Order Sale Date: '//*[@id="txtSaleDate"]'
+      Customer Work Order Status: '//*[@id="cmbInvStatus"]'
+      Completed option under Customer Work Order Status: '//select[@id=''cmbInvStatus'']/option[@value=''Completed'']'
+      Completed Status as selected: >-
+        //select[@id='cmbInvStatus']//following-sibling::option[@value='Completed']
+      customer-wo-provider: '//*[@id="cmbSatelliteProvider"]'
+      WorkOrder Provider Dropdown: '//*[@id="cmbSatelliteProvider"]'
+      Reprint: '//input[@name="btnReprint"]'
+      Reprint Agreement Body: //html//body
+      AT&T uVerse Internet option in WorkOrder Provider Dropdown: >-
+        //select[@id="cmbSatelliteProvider"]/option[text()='AT&T uVerse
+        Internet']
+      AT&T Mobility option in WorkOrder Provider Dropdown: '//select[@id="cmbSatelliteProvider"]/option[text()=''AT&T Mobility'']'
+      customer-wo-type: '//*[@id="cmbWOType"]'
+      WorkOrder Type Dropdown: '//*[@id="cmbWOType"]'
+      WorkOrder Promotion Dropdown on workorder: '//select[@name="cmbPromotion"]'
+      customer-wo-add-wo: '//*[@id="btnAddInvoice"]'
+      customer-wo-promotion: '//*[@id="cmbPromotion"]'
+      WorkOrder Promotion Dropdown: '//*[@id="cmbPromotion"]'
+      customer-wo-kits: '//*[@id="cmbKits"]'
+      WorkOrder Offer Dropdown: '//*[@id="cmbKits"]'
+      customer-wo-delete-btn: '//*[@id="Table12"]/tbody/tr/td[1]/input'
+      customer-wo-number: '//*[@id="txtWONumber"]'
+      Provider WO Number Textbox: '//*[@id="txtWONumber"]'
+      customer-wo-lead: '//*[@id="cmbLeadID"]'
+      WorkOrder Lead Rep Dropdown: '//*[@id="cmbLeadID"]'
+      customer-wo-rep: '//*[@id="cmbRepID"]'
+      WorkOrder Rep Dropdown: '//*[@id="cmbRepID"]'
+      WorkOrder Rep2 Dropdown: '//*[@name="cmbRepID2"]'
+      WorkOrder Rep3 Dropdown: '//*[@name="cmbRepID3"]'
+      customer-wo-agreement-num: '//*[@id="txtClaimID"]'
+      WorkOrder Agreement Number Textbox: '//*[@id="txtClaimID"]'
+      Add Work Order Button: '//*[@id="btnAddInvoice"]'
+      Delete Button Under Work Order: '//input[@name="btnDeleteInvoice"]'
+      Completed Selected: '//*[@value="Completed" and @selected]'
+      Save Work Order: '//input[@name="btnUpdateInvoice"]'
+      customer-wo-manual-appt: '//*[@id="defaultInvoiceInfo"]/tr[16]/td[2]/input[2][@name="btnForce"]'
+      Manual Button In WorkOrder: '//input[@type="button" and @name="btnForce"]'
+      customer-wo-create-manual-appointment: >-
+        //*[@id="2ndopenformtable"]/tbody/tr[6]/td/input[@value="Create
+        Appointment"]
+      Create Manual Appointment Button: >-
+        //*[@id="2ndopenformtable"]/tbody/tr[6]/td/input[@value="Create
+        Appointment"]
+      New Customer Form: '//*[@id="tblAccountData"]'
+      customer-attachments: '//*[@id="btnAttachments"]'
+      customer-attachment-file: '//iframe[@id="Attachment_Frame"]'
+      customer-attachment-desc: '//*[@id="Description"]'
+      customer-attachment-upload: '//iframe[@id="Attachment_Frame"]'
+      customer-attachment-filename: '//td[contains(descendant::text(), "{date_time}")]'
+      Attachments Button: '//*[@id=''btnAttachments'']'
+      Upload File Input Button:
+        - '//iframe[@id=''Attachment_Frame'']'
+        - '//*[@id=''File'']'
+      Upload Button:
+        - '//iframe[@id=''Attachment_Frame'']'
+        - '//*[@id=''uploadAttachment'']'
+      Uploaded File Name In Table:
+        - '//iframe[@id=''Attachment_Frame'']'
+        - '//a[text()=$uploadedFileName]'
+      Remove Button of Attachment File:
+        - '//iframe[@id=''Attachment_Frame'']'
+        - '//td[@class=''attachment-table-remove-cell'']/a'
+      Customer Sales Tax Rate: '//*[@id="salesTaxRateText"]'
+      Customer Zip Code: '//*[@id="txtZip"]'
+      Customer Zip Extension: '//*[@id="txtZipExt"]'
+      Customer City: '//*[@id="txtCity"]'
+      Customer State: '//*[@id="txtState"]'
+      Customer Phone Number: '//*[@id="txtPhone"]'
+      Customer Id Field In Lookup: '//*[@id="Text7"]'
+      Cust Id Textbox In Lookup: '//*[@id="Text7"]'
+      Go Button In Customer Lookup: '//*[@id="Submit1"]'
+      Sales Tax Check button: '//input[@id=''salesTaxRateButton'']'
+      Tax Info Updated Date: '//input[@id=''taxInfoUpdatedDateText'']'
+      Sales Tax Refresh button: '//input[@id=''salesTaxRateButton'']'
+      Cancel button: '//input[@id=''Cancel'']'
+      Customer Area: '//*[@id="cmbArea"]'
+      New Customer Area: '//*[@id="cmbArea"]/option[contains(text(),$Customer_New_Area)]'
+      Selected New Area in Customer Area: '//*[@id="cmbArea"]/option[contains(text(),$Customer_New_Area)]'
+      Customer Old Area: '//*[@id="cmbArea"]/option[contains(text(),$Customer_Old_Area)]'
+      Customer Old Area in Customer Area: '//*[@id="cmbArea"]/option[contains(text(),$Customer_New_Area)]'
+      ALLIANCE TECHNOLOGY GROUP Lead Rep: >-
+        //*[@id="cmbLeadID"]/option[contains(text(),"ALLIANCE TECHNOLOGY
+        GROUP")]
+      ADAN C HERNANDEZ Lead Rep: '//*[@id="cmbRepID"]/option[contains(text(),"ADAN C HERNANDEZ")]'
+      ADRIAN QUESADA Lead Rep: '//*[@id="cmbRepID"]/option[contains(text(),"ADRIAN QUESADA")]'
+      ADRIAN QUESADA Lead Rep2: '//*[@name="cmbRepID2"]/option[contains(text(),"ADRIAN QUESADA")]'
+      ADRIANA SALAZAR (S1) Lead Rep2: '//*[@name="cmbRepID2"]/option[contains(text(),"ADRIANA SALAZAR (S1)")]'
+      ANGEL RAMIREZ Lead Rep3: '//*[@name="cmbRepID3"]/option[contains(text(),"ANGEL RAMIREZ")]'
+      Save Customer Button: '//*[@id="btnUpdateCustomer"]'
+      Customer Lookup Records: '//*[@id="cmbRecords"]'
+      Customer Lookup First Page Link: >-
+        //*[@id="Table1"]/tbody/tr[1]/td/table/tbody/tr/td[2]/a[1]/u/b[text()="1"]
+      Hidden WO Preferences Dialogbox: '//div[@id="invoicesPref" and contains(@style, "display")]'
+      WO Preferences Dialogbox: '//div[@id="invoicesPref" and not(contains(@style, "display"))]'
+      Invoice Preferences Dialogbox: '//div[@id="invoicesPref" and not(contains(@style, "display"))]'
+      Dropdown Options Tab Under Invoice Preferences: '//*[@id="invoiceDropDownMenuItem"]'
+      Dropdown Options Select:
+        - '//iframe[@src=''dropDownFrame.asp?fr=invoice'']'
+        - '//select[@name=''cmbType'']'
+      WO Dropdown Value:
+        - '//iframe[@src=''dropDownFrame.asp?fr=invoice'']'
+        - '//select[@name=''cmbType'']/option[contains(text(),$WO_Dropdown_Value)]'
+      Values Dropdown: '/html/body/form/table/tbody/tr[1]/td[2]/input[@name="txtValue"]'
+      Values textbox:
+        - '//iframe[@src=''dropDownFrame.asp?fr=invoice'']'
+        - '//input[@name=''txtValue'']'
+      Created E2E Reason Link:
+        - '//iframe[@src=''dropDownFrame.asp?fr=invoice'']'
+        - '//a[contains(text(), ''E2E Reason'')]'
+      Delete Button Near Created E2E Reason Link:
+        - '//iframe[@src=''dropDownFrame.asp?fr=invoice'']'
+        - '//a[contains(text(),''E2E Reason'')]/parent::td/following-sibling::td/a'
+      Add Button Under Dropdown Options:
+        - '//iframe[@src=''dropDownFrame.asp?fr=invoice'']'
+        - '//input[@value=''Add'']'
+      Note Type Dropdown: '//*[@id="cmbType"]'
+      Customer Logs Link: '//a[@id="CustomerLogMenuItem"]'
+      Customer Logs List: '//div[@id="CustomerLogPanel"]'
+      E2E PROMO and $15 in same row: '//tr[td[contains(text(),''E2E PROMO'')] and td[contains(text(),''$15'')]]'
+      Tech Dropdown in Manual Schedule Dialog: '//select[@name=''cmbTech'']'
+      Install Date in Manual Schedule Dialog: '//input[@id=''txtInstallBeginDate'']'
+      Arrival Dropdown in Manual Schedule Dialog: '//select[@name=''cmbStart'']'
+      Departure Dropdown in Manual Schedule Dialog: '//select[@name=''cmbEnd'']'
+      Manual Schedule Dialog: '//td[contains(text(),''Manual Schedule'')]'
+      Manual Schedule Title: '//table[@id=''2ndopenformtable'']//td[contains(text(), ''Manual Schedule'')]'
+      Appointment From Time: '//select[@name=''cmbStart'']//option[text()=''7:00 am '']'
+      Appointment From Time Two: '//select[@name=''cmbStart'']//option[text()=''9:00 am '']'
+      Appointment To Time: '//select[@name=''cmbEnd'']//option[text()=''9:00 pm '']'
+      Appointment From Time Var startTime: '//select[@name=''cmbStart'']//option[contains(text(), $startTime)]'
+      Appointment To Time Var endTime: '//select[@name=''cmbEnd'']//option[contains(text(), $endTime)]'
+      Technician field: '//td[text()=''Technician:'']/following-sibling::td'
+      Appointment Date: >-
+        //td[text()='Apptment:']//following-sibling::td[contains(text(),$appointmentDate)]
+      Appointment Time: >-
+        //td[text()='Apptment:']//following-sibling::td[contains(text(),'7:00am-9:00pm')]
+      Appointment Time Two: >-
+        //td[text()='Apptment:']//following-sibling::td[contains(text(),'9:00am-9:00pm')]
+      Appointment Time Var appointmentTime: >-
+        //td[text()='Apptment:']//following-sibling::td[contains(text(),$appointmentTime)]
+      Appts Button: '//input[@name=''btnAppts'']'
+      Added Technician: '//form[@name=''appt'']//table//td[contains(.,''ANDRES NAUFFAL'')]'
+      Added Manual Appointment From and To Time Two: '//form[@name=''appt'']//table//td[contains(.,''9:00 am-9:00 pm'')]'
+      Added Manual Appointment From and To Time: '//form[@name=''appt'']//table//td[contains(.,''7:00 am-9:00 pm'')]'
+      Open is selected in Result Dropdown: '//select[@name=''cmbResult'']/option[text()=''Open'' and @selected]'
+      Sale option under type on work order: '//option[text()=''Sale'' and @value=''SA'']'
+      ANGEL RIOS option under rep dropdown on work order: '//select[@name=''cmbRepID'']/option[@value=''3205'']'
+      Ben Dodge option under Tech Dropdown in Manual Schedule Dialog: '//option[@value=''195'']'
+      Work Order panel caption: '//table//tr//td[contains(@onmouseover, ''setInvoicesPrefsTimer'')]'
+      Edit Preferences link: '//tr[@id=''divInvoicesPrefsLink'']//a//font[text()=''Edit Preferences'']'
+      Reps per invoice dropdown: '//select[@id=''cmbInvoiceReps'']'
+      Reps per invoice option 3: '//select[@id=''cmbInvoiceReps'']//option[@value=''3'']'
+      Update button in Invoice Preferences: '//tr[@id=''invoiceUpdate'']//input[@value=''Update'']'
+      Close Link In Manual Appointment Dialog: '//a[text()="Close"]'
+      Customer Lookup Results Table: '//div[@id="ie6-container-wrap"]/table[2]'
+      Customer Lookup Results 500 Page Link: '//a[@title="124751-125000"]'
+      'First WO# From Customer Lookup': '//*[@id="Table1"]/tbody/tr[3]/td[1]'
+      First WO From Page One: '//*[@id="Table1"]/tbody/tr[3]/td[1][contains(text(), $First_WO_No)]'
+      Customer Lookup Results 505 Page Link: '//a[@title="126001-126250"]'
+      Sprint value in Provider dropdown menu: '//select[@id="cmbSatelliteProvider"]/option[text()=''Sprint'']'
+      Other value in Promotion dropdown menu: '//select[@name=''cmbPromotion'']/option[text()=''Other'']'
+      WorkOrder Devices Dropdown: '//*[@id="cmbDevices"]'
+      1 value in Devices dropdown menu: '//select[@name=''cmbDevices'']/option[text()=''1'']'
+      Work Order Cell input box: '//*[@id="txtCellPhone1"]'
+      Work Order Act Date input box: '//*[@id="txtActivationDate1"]'
+    name: Customers
+  - selectors:
+      Schedule New Appointment Button: '//input[@name="btnSchedule"]'
+      Calendar Slot At 5 30am To 6 30am: '//a[text()="5:30am-6:30am"]'
+      Calendar Slot At 6 30am To 7 30am: '//a[text()="6:30am-7:30am"]'
+      Calendar Slot At 9 30am To 10 30am: '//a[text()="9:30am-10:30am"]'
+      Calendar Slot At 5 00am To 6 00am: '//a[text()="5am-6am"]'
+      Calendar Slot At 6 00am To 7 00am: '//a[text()="6am-7am"]'
+      Calendar Slot At 9 00am To 10 00am: '//a[text()="9am-10am"]'
+    name: Customers - Appointments
+  - selectors:
+      Reports User List: '//*[@name="cmbRepTech"]'
+      Reports Begin Date: '//*[@id="txtBeginDate"]'
+      Reports End Date: '//*[@id="txtEndDate"]'
+      Go Button In Reports: '//*[@id="Submit1"]'
+      Custom Button In Reports: '//input[@type="button" and @value="Custom"]'
+      Report Table: '//*[@id="openReportTable"]'
+      Successful Login Entry For ANDRES NAUFFAL In Report Table: >-
+        //table[@id="openReportTable"]//td[contains(text(), "ANDRES
+        NAUFFAL")]/parent::tr/td[4][contains(text(), "Successful Login for
+        username")]
+    name: Reports
+  - selectors:
+      Begin Date Textbox In User Audit Logs: '//*[@id="txtBeginDate"]'
+      Go Button In User Audit Logs: '//*[@id="Submit1"]'
+      Current User Full Name In Affected User Column: '//tr[@class="small"]/td[2][contains(text(), "{admin User Fullname}")]'
+      Current User Full Name Displayed In Affected User Column: '//tr[@class="small"]/td[2][contains(text(), $adminuserfullname)]'
+      Time card entry has been modified Text On The Same Row: >-
+        //tr[@class="small"]/td[2][contains(text(), "{admin User
+        Fullname}")]/parent::tr/td[contains(text(), "Time card entry has been
+        modified")]
+      Time Card Entry Has Been Modified Text On The Same Row: >-
+        //tr[@class="small"]/td[2][contains(text(),
+        $adminuserfullname)]/parent::tr/td[contains(text(), "Time card entry has
+        been modified")]
+      New employee E2E USER Table Entry: '//td[contains(text(), "New employee") and contains(text(), "E2E USER")]'
+      Created employee E2E USER Table Entry: '//td[contains(text(), "New employee") and contains(text(), $LastName)]'
+      Successful Login for username admin Table Entry: '//td[contains(text(), "Successful Login for username admin")]'
+      Admin preferences were updated Table Entry: '//td[contains(text(), "Admin preferences were updated")]'
+      Custom checkbox display change in invoice preferences Table Entry: >-
+        //td[contains(text(), "Custom checkbox display change in invoice
+        preferences")]
+    name: Reports - User Audit Logs
+  - selectors:
+      Begin Date Textbox In Payroll Check History Report: '//*[@id="txtBeginDate"]'
+      Go Button In Payroll Check History Report: '//*[@id="Submit1"]'
+      Report Table In Payroll Check History Report: '//*[@id="openReportTable"]'
+    name: Reports - Payroll Check History
+  - selectors:
+      reports-route-begin-date: '//*[@id="txtBeginDate"]'
+      reports-route-go: '//*[@id="Submit1"]'
+      reports-route-btn-custom: '/html/body/table[2]/tbody/tr[2]/td/input[2][@value="Custom"]'
+      reports-route-first-row: '//table[@class=''small'']//tr[@class=''small''][1]'
+      reports-route-appt-button: >-
+        (//table[@class='small']//tr[@class='small']//input[@name='btnAppointment'])[last()]
+      reports-route-new-activation: '(//table//tr//td//b[contains(text(), ''New Activation'')])[last()]'
+      reports-route-e2e-customer: '//table//tr//td//a[contains(text(), ''E2E CUSTOMER1'')]'
+      Appointments Arrived button: '//input[@name=''btnArrive'']'
+      Appointments Update button: '//input[@name=''btnUpdate'']'
+      Appointments Result dropdown: '//select[@name=''cmbResult'']'
+      Appointments History table: '//table//tr//td[contains(text(), ''Appointment History'')]'
+      Appointments History Arrived status: '//table//tr//td//b[text()=''Arrived'']'
+      Appointments History Completed status: '//table//tr//td//b[text()=''Completed'']'
+    name: Reports - Technician
+  - selectors:
+      Commissions Header Text: '//td[contains(text(), '' Commissions'')]'
+      report-commissions-header-text: '//td[contains(text(), '' Commissions'')]'
+      report-commissions-reports: '//*[@id="cmbReport"]'
+      Reports Dropdown Menu In Commissions: '//*[@id="cmbReport"]'
+      report-commissions-provider: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[4]/select'
+      Provider Dropdown Menu in Commissions: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[4]/select'
+      report-commissions-begin-date: '//*[@id="txtBeginDate"]'
+      Begin Date In Commissions: '//*[@id="txtBeginDate"]'
+      report-commissions-end-date: '//*[@id="txtEndDate"]'
+      End Date In Commissions: '//*[@id="txtEndDate"]'
+      report-commissions-go: '//*[@id="Submit1"]'
+      Go Button In Commissions: '//*[@id="Submit1"]'
+      report-commissions-report-table: '//*[@id="openReportTable"]'
+      Commission Report Table: '//*[@id="openReportTable"]'
+      Manual Reconciliation Row In Commissions Report For E2E CUSTOMER1 With $35 Expected: >-
+        //a[text()="E2E CUSTOMER1"]/parent::td/parent::tr/td[6][contains(text(),
+        "$35.00")]
+      DOWNLOAD Link Under Commissions Report: '//b[text()="DOWNLOAD"]'
+      Added User Name in Reports Technician Table: '//td[@class=''mediumBlack'']'
+      Date for Manual Appointment: '//td[contains(.,$currentDate)]'
+      Time for Manual Appointment: '//td[contains(.,''9:00 am-9:00 pm'')]'
+    name: Reports - Commissions
+  - selectors:
+      Go Button In Statuses Report: '//*[@id="Submit1"]'
+      Statuses Report Table: '//*[@id="openReportTable"]'
+      Created WorkOrder Entry For E2E CUSTOMER1 In Statuses Report Table: '(//a[text()="E2E CUSTOMER1"])[1]'
+      WO 37167 In Statuses Report Table: '(//td[text()=" 37167"])'
+      Provider Dropdown In Statuses Report: '//select[@name="cmbProvider"]'
+      Promotion Dropdown In Statuses Report: '//select[@name="cmbPromotion"]'
+      Begin Date Textbox In Statuses Report: '//*[@id="txtBeginDate"]'
+      End Date Textbox In Statuses Report: '//*[@id="txtEndDate"]'
+      Reports Dropdown Menu In Statuses Report: '//*[@name="cmbReport"]'
+      Total Records Count: '//tr[@class="small"]//a[contains(@href,"account")]'
+      Total Records Cell: '(//tr[@class="small"]/*[@colspan="5"])[1]'
+      Total Records footer cell in Statuses Report: '//td[contains(text(), "Total Records:")]'
+      Total New Lines footer cell in Statuses Report: '//td[contains(text(), "Total New Lines:")]'
+      Total Line Upgrades footer cell in Statuses Report: '//td[contains(text(), "Total Line Upgrades:")]'
+      Total Promotions footer cell in Statuses Report: '//td[contains(text(), "Total Promotions:")]'
+      A Report Entry For E2E CUSTOMER1 With WorkOrder 31211: >-
+        //a[text()="E2E CUSTOMER1"]/parent::td/parent::tr/td[3][contains(text(),
+        "31211")]
+      A Report Entry For 9137 ABBA With WorkOrder 37162: >-
+        (//a[text()="9137 ABBA"]/parent::td/parent::tr/td[3][contains(text(),
+        "37162")])[1]
+    name: Reports - Statuses
+  - selectors:
+      Data Export title: '//table[@id=''2ndopenformtable'']//tr//td[contains(text(), ''Data Export'')]'
+      Data Export dropdown in Exports Report: '//select[@name=''cmbReport'']'
+      Area dropdown in Exports Report: '//select[@name=''cmbArea'']'
+      Provider dropdown in Exports Report: '//select[@name=''cmbProvider'']'
+      Begin Date Textbox In Exports Report: '//*[@id="txtBeginDate"]'
+      End Date Textbox In Exports Report: '//*[@id="txtEndDate"]'
+      Go Button In Exports Report: '//input[@name=''btnLookup'']'
+      Download Button In Exports Report: '//a//b[text()=''DOWNLOAD'']'
+    name: Reports - Export
+  - selectors:
+      Maturity Begin Textbox: '//*[@id="txtBeginDate"]'
+      Go Button In Holdback Maturity Report: '//*[@id="Submit1"]'
+    name: Reports - Holdback Maturity
+  - selectors:
+      reportsv2-start-date: '//*[@id="startdate"]'
+      reportsv2-end-date: '//*[@id="enddate"]'
+      Begin Date From Reports Parameters:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//*[@id=''startdate'']'
+      Begin Date in Report Parameters section:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//input[@id=''startdate'']'
+      End Date From Reports Parameters:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//*[@id=''enddate'']'
+      End Date in Report Parameters section:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//input[@id=''enddate'']'
+      Run Report Button:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//input[@class=''btn-blue-big'']'
+      Run Report Button in Received Commissions page:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//input[@class=''btn-blue-big'']'
+      Loading Progress symbol:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//div[@class=''loading-progress-bg'']'
+      Report Grid Header:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//*[@id=''reportData'']/div[2]'
+      Report Grid Header in Received Commissions page:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//*[@id=''reportData'']/div[2]'
+      reportsv2-grid-header: '//*[@id="reportData"]/div[2][@class="k-grid-header"]'
+      reportsv2-run-report: '//*[@id="ReportParameters"]/div[3]/div[2]/input[@value="Run Report"]'
+    name: Reports V2 Main
+  - selectors:
+      hr-details-run-report-button: '//*[@id="ReportParameters"]/div[3]/div[2]/input'
+      Run Report Button Under HR Details:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//input[@value=''Run Report'']'
+      Report Data Grid:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//*[@id=''reportData'']/div[3]'
+      hr-details-download:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//*[@id=''downloadReport'']'
+      hr-details-ceron: '//td[contains(descendant::text(), "CERON")]'
+      Entry Item With Last Name Ceron:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//td[contains(descendant::text(), ''CERON'')]'
+      hr-details-dropdwon-active: '//*[@id="Parameter_LS_673"]'
+      Show Dropdown:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//*[@id=''Parameter_LS_673'']'
+    name: Reports V2 - HR Details
+  - selectors:
+      payroll-details-start-date: '//*[@id="startdate"]'
+      payroll-details-run-report: '//*[@id="ReportParameters"]/div[3]/div[2]/input'
+      Table Entry With 299241986 In ClaimID Column:
+        - '//iframe[@id=''ReportsV2Frame'']'
+        - '//td[text()=''299241986'']'
+    name: Reports V2 - Payroll Details
+  - selectors:
+      reportsv2-import-comm-start-date: '//*[@id="startdate"]'
+      reportsv2-import-comm-end-date: '//*[@id="enddate"]'
+      reportsv2-import-comm-grid-header: '//*[@id="reportData"]/div[2][@class="k-grid-header"]'
+      reportsv2-import-comm-run-report: '//*[@id="ReportParameters"]/div[3]/div[2]/input[@value="Run Report"]'
+    name: Reports V2 - Import Commissions
+  - selectors:
+      Preferences Under Admin Tab: '//*[@id="tab-7"]/li[1]/a'
+      Preferences Submenu Item: '//*[@id="tab-7"]/li[1]/ul/li[1]/a'
+      Updates Submenu Item: '//*[@id="tab-7"]/li[1]/ul/li[7]/a'
+    name: Admin
+  - selectors:
+      Company Textbox In Admin Preferences: '//*[@id="Text14"]'
+      Submit Button in Admin Preferences: '//*[@id="Submit1"]'
+      Save Button In Admin Preferences: '//*[@id="Submit1"]'
+      Preferences Header Text: '//td[contains(text(), "Preferences")]'
+      Holidays Tab: '(//a[contains(text(),"Holidays")])[2]'
+      Company Holidays Header Text: '//td[contains(text(), "Company Holidays")]'
+      Holiday Description: '//*[@id="txtDescription"]'
+      Holiday Date: '//*[@id="txtDate"]'
+      Holiday Add Button: '//*[@id="btnAdd"]'
+      Created Holiday Entry: '//a[text()="5/30/2040"]'
+      Delete Created Holiday Button: '//a[text()="5/30/2040"]/parent::td/parent::tr/td[3]/a'
+      Default Note Type: '//*[@id="Select2"]'
+      Contracts: '//a[contains(text(),''Contracts'')]'
+    name: Admin - Preferences
+  - selectors:
+      Sale Tab: '//input[@name=''btnSale'']'
+      Sale Textarea: '//textarea[@name=''txtSale'']'
+      Save: '//input[@name=''btnUpdate'']'
+      Admin - Preferences - Contracts page: '//td[text()[normalize-space()=''3rd Party Provider Contracts'']]'
+    name: Admin-Preferences -Contracts
+  - selectors:
+      import-template-lib-create-new: '//*[@id="createTemplateButton"]'
+      import-template-name: '//*[@id="importTemplateName"]'
+      Import Template Name Textbox:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//*[@id=''importTemplateName'']'
+      import-template-cb-active: '//*[@id="IsActive"]'
+      import-template-cb-ignore-first-line: '//*[@id="IsIgnoreFirstLine"]'
+      import-template-rb-leads-only: '(//*[@id="ImportTypeId"])[1]'
+      import-template-cb-source-fields-all: '//*[@id="DataTables_Table_0"]/thead/tr/th[1]/input'
+      import-template-move-all-fields: '//*[@id="add_to_selected_fields"]'
+      import-template-cb-select-all-fields: '//*[@id="add_to_selected_fields"]'
+      import-template-save: '//*[@id="btnSaveTemplate"]'
+      import-template-test-template: '//*[starts-with(text(), ''Test Template '')]'
+      import-template-test-clone-template: '//*[starts-with(text(), ''test-clone-template'')]'
+      import-template-first-clone: '(//a[contains(descendant::text(), "Clone")] )[1]'
+      Create New Button in Import Template Library:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//a[@id=''createTemplateButton'']'
+      Template Name field:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''importTemplateName'']'
+      Active Checkbox under Template Name field:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''IsActive'']'
+      Active Checkbox under Template Name field checked:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''IsActive'' and @checked]'
+      Ignore the first line checkbox:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''IsIgnoreFirstLine'']'
+      Ignore the first line checkbox checked:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''IsIgnoreFirstLine'' and @checked]'
+      Option button Leads Only checked:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//*[@id=''ImportTypeId'' and @value=''1'' and @checked]'
+      Option button Leads Only:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//*[@id=''ImportTypeId'' and @value=''1'']'
+      Select All available fields Checkbox in left panel:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@class=''all_import_fields_checkbox'']'
+      Move All fields button:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''add_to_selected_fields'']'
+      Select All Import fields Checkbox in right panel:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''all_selected_import_fields_checkbox'']'
+      Save button in Import Template Library:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@id=''btnSaveTemplate'']'
+      template <Template Name>:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//a[contains(text(),$TemplateName)]'
+      Created Template Name:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//a[starts-with(text(), ''Test Template '')]'
+      clone link for the created Template:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - >-
+          //a[contains(text(),$TemplateName)]/ancestor::tr//a[contains(text(),'Clone')]
+      Import Template Editor Title:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//h2[text()[normalize-space() = ''Import Template Editor'']]'
+      Cloned template <NewTemplateName>:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//a[contains(text(),$NewTemplateName)]'
+      Search Textbox In Import Template Library:
+        - '//iframe[@id=''importTemplateFrame'']'
+        - '//input[@type=''search'']'
+    name: Admin - Import Template Library
+  - selectors:
+      import-leads-customers-wo: '//*[@id="Button5"]'
+      import-test-template-option: '//option[contains(text(), "test-template")]'
+      Import Button: '//*[@id="tab-7"]/li[8]/a'
+      Import Submenu Item: '//*[@id="tab-7"]/li[8]/ul/li[1]/a'
+      Data Import Header Text: '//td[text()="Data Import "]'
+      Choose File Button In Step 1: '//*[@id="file"]'
+      LEADS Button In Step 3 16: '//*[@id="Button22"]'
+      Upload file to server Button: '//*[@id="btnUpload"]'
+      Import 3 16 Fast csv Bold Text Below Upload file to server Button: '//li[@type="circle"]'
+      Lead Entry Named Imported Lead: '//a[contains(text(), "Imported Lead")]'
+      Delete Button On The Row Of Lead named Imported Lead: '//a[contains(text(), "Imported Lead")]/parent::td/parent::tr/td[11]/a'
+      'button ''Leads, Customers, Work Orders''': '//input[@value=''Leads, Customers, Work Orders'']'
+      Template dropdown: '//select[@id=''cmbTemplate'']'
+      option <TemplateName> created: '//option[contains(text(),$TemplateName)]'
+      Submit button: '//input[@value=''Submit'']'
+      Status text message: '//td[@class=''message'']'
+    name: Admin - Import
+  - selectors:
+      admin-update-promotions: '//*[@id="Submit1"]'
+      Update Promotions Button: '//*[@id="Submit1"]'
+      admin-update-kits: '//*[@id="Submit2"]'
+      admin-update-commissions: '//*[@id="Submit5"]'
+      Update Commissions Button: '//*[@id="Submit5"]'
+      Commissions Have Been updated Message: '//font[contains(text(), "Commissions have been updated")]'
+      Promotions Have Been Updated Message: '//font[contains(text(), "Promotions have been updated")]'
+      Programming Has Been Updated Message: '//font[contains(text(), "Programming has been updated")]'
+      Update Programming Button: '//*[@id="Submit6"]'
+      Updates Header Text: '//td[contains(text(), "Update Agemni CMS")]'
+    name: Admin - Update
+  - selectors:
+      admin-promotion-Provider Dropdown: '//select[@name="cmbProvider"]'
+      admin-promotion-Promotion Textbox: '//input[@name="txtPromotion"]'
+      admin-promotion-created-promotion: '//td[contains(text(), $promotions)]'
+      Admin Promotions Table: '//table[@cellpadding="4"]'
+      11 =775 Cell Primary: '//a[text()=" 11 =775 Cell Primary "]'
+      =775 Cell Primary: '//a[text()=" =775 Cell Primary "]'
+      ATTUVI Option under Provider Dropdown: '//option[@value=''ATTUVI'']'
+      ATT Option under Provider Dropdown: '//option[@value=''ATT'']'
+      Promotions Inactive Hyperlink: '//a[contains(text(), "Inactive")]'
+      ATT Records Under Promotions: '//td[@class="small"]/a[contains(text(), "AT&T")]'
+      Admin Promotions Button: '//a[contains(@href, "/cms/promotions.asp")]'
+    name: Admin - Promotions
+  - selectors:
+      Area Textbox In Admin: '//*[@id="txtarea"]'
+      Area Street: '//*[@id="Text3"]'
+      Area City: '//*[@id="Text4"]'
+      Area State: '//*[@id="Text5"]'
+      Area Zip: '//*[@id="Text6"]'
+      Area Type In Admin: '//*[@id="cmbAreaType"]'
+      Area Warehouse In Admin: '//*[@id="cmbWarehouse"]'
+      Area Merchant: '//*[@id="cmbMerchant"]'
+      Area Sales Tax: '//*[@id="Text2"]'
+      Area Timezone: '//*[@id="cmbTimeZone"]'
+      Area Schedule By: '//*[@id="cmbScheduleType"]'
+      Area Start Time: '//*[@id="cmbAreaStartTime"]'
+      Area Start Time Two: '//*[@id="cmbAreaStartTime"]//option[text()=''11:00 am'']'
+      Area Start Time option Area_Start_Time_Value: '//*[@id="cmbAreaStartTime"]//option[text()=$Area_Start_Time_Value]'
+      Area End Time: '//*[@id="cmbAreaEndTime"]'
+      Do Not Use Employee Logins for this Area: '//*[@id="Checkbox3"]'
+      Limit Techs by Zipcode: '//*[@id="Checkbox1"]'
+      Area Active: '//*[@id="Checkbox2"]'
+      Add Area Button: '//input[@type="submit" and @name="btnAdd"]'
+      All Areas Link: '//a[text()="All Areas"]'
+      Selected All Areas Link: '//a[descendant::text()="All Areas"]'
+      Created Area Link: '//a[contains(descendant::text(), $E2E_Area)]'
+      Time Slots Button For ALLIANCE TECHNOLOGY GROUP: >-
+        //b[text()="ALLIANCE TECHNOLOGY
+        GROUP"]/parent::a/parent::td/parent::tr/td[7]//input[@name="btnSlots"]
+      Sunday Link From Week Days: '//font[text()="Sunday"]'
+      Sunday Copy to all Link: '//*[@id="Table1"]/tbody/tr[3]/td[1]/a[1]'
+      Slot 1 Times From Dropdown: '//select[@name="cmbStartTime1"]'
+      Slot 2 Times From Dropdown: '//select[@name="cmbStartTime2"]'
+      Slot 3 Times From Dropdown: '//select[@name="cmbStartTime3"]'
+      Slot 1 Times To Dropdown: '//select[@name="cmbEndTime1"]'
+      Slot 2 Times To Dropdown: '//select[@name="cmbEndTime2"]'
+      Slot 3 Times To Dropdown: '//select[@name="cmbEndTime3"]'
+      Slot 1 Times From 5 AM: '//select[@name="cmbStartTime1"]/option[@value="10"]'
+      Slot 1 Times From 5 30 AM: '//select[@name="cmbStartTime1"]/option[@value="11"]'
+      Slot 2 Times From 6 AM: '//select[@name="cmbStartTime2"]/option[@value="12"]'
+      Slot 2 Times From 6 30 AM: '//select[@name="cmbStartTime2"]/option[@value="13"]'
+      Slot 3 Times From 9 AM: '//select[@name="cmbStartTime3"]/option[@value="18"]'
+      Slot 3 Times From 9 30 AM: '//select[@name="cmbStartTime3"]/option[@value="19"]'
+      Slot 1 Times To 6 AM: '//select[@name="cmbEndTime1"]/option[@value="12"]'
+      Slot 1 Times To 6 30 AM: '//select[@name="cmbEndTime1"]/option[@value="13"]'
+      Slot 2 Times To 7 AM: '//select[@name="cmbEndTime2"]/option[@value="14"]'
+      Slot 2 Times To 7 30 AM: '//select[@name="cmbEndTime2"]/option[@value="15"]'
+      Slot 3 Times To 10 AM: '//select[@name="cmbEndTime3"]/option[@value="20"]'
+      Slot 3 Times To 10 30 AM: '//select[@name="cmbEndTime3"]/option[@value="21"]'
+      Slot 1 Max Installs: '//input[@type="text" and @name="txtAllowed1"]'
+      Slot 2 Max Installs: '//input[@type="text" and @name="txtAllowed2"]'
+      Slot 3 Max Installs: '//input[@type="text" and @name="txtAllowed3"]'
+      Update Button In Timeslots Window: '//input[@id="Submit1"]'
+      Slot 4 Clear Row Link: '//a[@onclick="clearRow(4);"]'
+      Area End Time option Area_End_Time_Value: '//*[@id="cmbAreaEndTime"]//option[contains(text(),$Area_End_Time_Value)]'
+      checked Do Not Use Employee Logins for this Area Checkbox: '//input[@name=''chkNoEmpLogins'' and @checked]'
+      checked Limit Techs by Zipcode Checkbox: '//input[@name=''chkLimitTechs'' and @checked]'
+    name: Admin - Areas
+  - selectors:
+      Expected Commissions Header Text: '//td[contains(text(), "Expected Commissions")]'
+      Delete Icon of AT&T Mobility: >-
+        //td[input[@value="AT&T
+        Mobility"]]/following-sibling::td[input[@value="Acct
+        #"]]//following-sibling::td//a
+      Provider Drop down: '//select[contains(@id,''cmbProvider'')]'
+      AT&T Mobility option of Provider Drop down: '//option[text()=''AT&T Mobility'']'
+      Link By Drop down: '//select[contains(@id,''cmbLinkBy'')]'
+      Add Edit button of Promotion and Kit: >-
+        (//tr[td[text()='Promotion and
+        Kit']]//following-sibling::td/input[@value='Add/Edit'])[last()]
+      Promotion Drop Down in Commission Payment Amounts Window: '//select[@id=''cmbPromotion'']'
+      Kit Drop Down in Commission Payment Amounts Window: '//select[@id=''cmbKits'']'
+      Payment code Text Box in Commission Payment Amounts Window: '//input[@id=''txtPayCode'']'
+      Add Record Button in Commission Payment Amounts Window: '//input[@id=''btnAddRecord'']'
+      Begin Date in Commission Payment Amounts Window: '//input[@id=''txtBegin'']'
+      Amount Text Box in Commission Payment Amounts Window: '//input[@id=''txtAmount'']'
+      Add Button in Commission Payment Amounts Window: '//input[@id=''btnAdd'']'
+      Provider with value AT&T Mobility: '//td[text()=''AT&T Mobility'']'
+      Promotion with value 3 New Lines: '//td[text()=''3 New Lines'']'
+      Payment Code with value E2E PROMO: '//td[text()=''E2E PROMO'']'
+      Amount with value: '//td[contains(text(),$amount)]'
+      Begin Date with value: '//td[text()=$date]'
+      Close Button in Commission Payment Amounts Window: '//a[text()=''Close'']'
+    name: Admin - Expected Commissions
+  - selectors:
+      Cell Phone Tab: '//a[text()="Cell Phone"]'
+      Manage Providers Header Text: '//td[text()="Manage Providers"]'
+      ATT Mobility Provider Checkbox With Id 86: '//*[@id="chkProviderATT"]'
+      Checkbox With Id 47: '//*[@id="txtProvPHONE1"]'
+      Save Button In Providers Page: '//*[@id="Submit2"]'
+      Textbox Next To Id 47 Checkbox: '//*[@id="txtProvPHONE1"]'
+      47 Checkbox: '//*[@id="chkProviderPHONE1"]'
+      Sale Checkbox Under ATT Mobility: '//input[@type="checkbox" and @name="chkInvTypeATT|SA"]'
+    name: Admin - Providers
+  - selectors:
+      User Lookup Header Text: '//td[text()="User Lookup"]'
+      hr-lookup: '//*[@id="tab-4"]/li[1]/a'
+      HR Lookup Button: '//*[@id="tab-4"]/li[1]/a'
+      hr-lookup-firstname: '//*[@id="txtFName"]'
+      First In User Lookup: '//*[@id="txtFName"]'
+      hr-lookup-lastname: '//*[@id="txtLName"]'
+      Last In User Lookup: '//*[@id="txtLName"]'
+      Username In User Lookup: '//input[@name="txtUsername"]'
+      Password Reset Link In User Lookup: '//a[@id="PasswordResetLink"]'
+      hr-lookup-go: '//*[@id="Submit1"]'
+      Go Button In HR Lookup: '//*[@id="Submit1"]'
+      hr-employee-active: '//*[@id="txtActive"]'
+      hr-employee-save: '//*[@id="Submit1"]'
+      Save Employee Button: '//*[@id="Submit1"]'
+      User Header: '//td[contains(text(), " User")][@class= ''medium'']'
+      Phone Column Header: >-
+        //a[@href="employeelookup.asp?sort=true&act=1&which=hr&ob=Phone&clicks=1&prev="]
+      User Lookup Table: '//table[@id="Table1"]'
+      ANDRES NAUFFAL Link Under Name/Company Column: '//a[contains(text(), "ANDRES NAUFFAL")]'
+      Blue H Button Next To TestPlan In Current Task Payroll: >-
+        //span[text()="TestPlan"]/following-sibling::label/following-sibling::span/following-sibling::input[@value="H"]
+      Active plan 'TestPlan' with 'X' link under Remove Pay Plan: '//tbody/tr[1]//td[contains(text(),''TestPlan'')]'
+      Active plan 'E2E-Plan' with 'X' link under Remove Pay Plan: '(//td[contains(text(),''E2E-Plan'')])[1]'
+      title 'User Pay Plan Mgmt - Assigned Plans for ANDRES NAUFFAL': >-
+        //h2[contains(text(),'User Pay Plan Mgmt - Assigned Plans for ANDRES
+        NAU')]
+      the 'X' link next to active 'TestPlan' Two: >-
+        //*[text()='TestPlan']//parent::tr/td/a[text()='X' and
+        not(contains(@style,'none'))]
+      the 'X' link next to active 'TestPlan': '//tbody/tr[1]//td[6]//a[text()[normalize-space() = ''X'']]'
+      the 'X' link replaced with 'Removed': '//tbody/tr[1]//td[6]//div[text()[normalize-space() = ''Removed'']]'
+      Text Msg Inputbox on User Page: '//input[@name="txtTextMessage"]'
+    name: HR
+  - selectors:
+      User Pay Plan Mgmt Header Text:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - '//h2[text()=''User Pay Plan Mgmt'']'
+      Table Entry For ANDRES NAUFFAL With TestPlan Assigned Under Pay Plan Column:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - >-
+          //a[contains(text(),'ANDRES
+          NAUFFAL')]/parent::td/parent::tr/td[6]/a[contains(text(), 'TestPlan')]
+      Checkbox On The Row Containing PEDRO SEMAAN:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - >-
+          //a[contains(text(), 'PEDRO
+          SEMAAN')]/parent::td/parent::tr/td[1]/input
+      Username link 'PEDRO SEMAAN':
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - '//a[contains(text(), ''PEDRO SEMAAN'')]'
+      Select a Pay Plan Dropdown:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - >-
+          //label[contains(text(),'Select a Pay
+          Plan')]/ancestor::div[contains(@class,'form-block')]//select
+      3 - TestPlan option:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - >-
+          //label[contains(text(),'Select a Pay
+          Plan')]/ancestor::div[contains(@class,'form-block')]//select//option[contains(text(),'3
+          - TestPlan')]
+      5 - E2E-Plan option:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - >-
+          //label[contains(text(),'Select a Pay
+          Plan')]/ancestor::div[contains(@class,'form-block')]//select//option[contains(text(),'5
+          - E2E-Plan')]
+      Update Selected Users Button:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - '//*[@id=''UserPayPlanMgmt_Update_Button'']'
+      3 - TestPlan In The Row For PEDRO SEMAAN In Pay Plan Column:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - >-
+          //a[contains(text(), 'PEDRO
+          SEMAAN')]/parent::td/parent::tr/td[6]/a[text()='3 - TestPlan']
+      5 - E2E-Plan In The Row For PEDRO SEMAAN In Pay Plan Column:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - >-
+          //a[contains(text(), 'PEDRO
+          SEMAAN')]/parent::td/parent::tr/td[6]/a[text()='5 - E2E-Plan']
+      Remove Pay Plan Button:
+        - '//iframe[@id=''payrollMgmtFrame'']'
+        - '//*[@id=''UserPayPlanMgmt_Remove_Button'']'
+      Ok Button On Updating Error Dialog Box: >-
+        //button[@class="ui-button ui-widget ui-state-default ui-corner-all
+        ui-button-text-only"]
+    name: HR - User Payroll Mgmt
+  - selectors:
+      Run Payroll Header Text: '//td[contains(text(), "Run Payroll")]'
+      Run Payroll Begin Date Textbox: '//*[@id="txtBeginDate"]'
+      Run Payroll Display Button: '//input[@type="submit" and @name="btnDisplay"]'
+      Button With Plus Sign On ADRIANA SALAZAR Row With 58$ Total Sum: '//input[@type="button" and @name="btnShow1920"]'
+      Button With c On ADRIANA SALAZAR Row With 58$ Total Sum: >-
+        //input[@type="button" and
+        @name="btnShow1920"]/parent::div/following-sibling::*/input[2]
+      Mark Checked Items Paid Button At The Bottom Of The Screen: '//input[@type="submit" and @name="txtSubmit"]'
+      Begin Date Textbox In Payroll History: '//*[@id="txtBeginDate"]'
+      Display Button In Payroll History: '//input[@name="btnDisplay"]'
+      Payroll Entry With A Sum Of $58: '//td[text()="$58.00"]'
+      Unpay Batch Link: '//td[text()="$58.00"]/parent::tr/td[6]/a'
+      Expand Button of ADRIANA SALAZAR: >-
+        //tr[td[contains(text(),'ADRIANA SALAZAR')]]//td//input[@title='Expand
+        Employee Details']
+      C Button of ADRIANA SALAZAR: >-
+        //tr[td[contains(text(),'ADRIANA SALAZAR')]]//td//input[@title="Check
+        All Employee Payments"]
+      View link under DETAILS column: '(//td[text()=''$58.00'']/following::a[text()= ''View''])[1]'
+      CHECK input textbox: '(//input[contains(@name,"txtEmpCheck") and @type="text"])[1]'
+      Update Checks button: '//input[@value="Update Checks"]'
+      Close button: '//a[contains(text(),''Close'')]'
+      First Employee Expand details plus icon: '(//td//input[@title="Expand Employee Details"])[1]'
+      First Employee Name under Run Payroll Table: '(//td//input[@title="Expand Employee Details"])[1]//ancestor::tr/td[1]'
+      Total Amount for First Employee under Run Payroll Table: >-
+        (//td//input[@title="Expand Employee
+        Details"])[1]//ancestor::tr//td[@class="smallbold"]
+      C Button of First Employee on Table: '(//td//input[@title="Check All Employee Payments"])[1]'
+      EmployeeName for payroll: '//tr//td[contains(text(),$EmployeeName)]'
+      Total Amount Value on Payroll History table: '//tr//td[text()=$TotalAmount]'
+      View Link for Total Amount under DETAILS column: '//tr//td[text()=$TotalAmount]/parent::tr//a[text()="View"]'
+      Unpay Batch for Total Amount under REMOVE column: '//tr//td[text()=$TotalAmount]/parent::tr//a[text()="Unpay Batch"]'
+    name: HR - Payroll
+  - selectors:
+      Roles Header Text: '//td[text()="Roles"]'
+      Manage Employee Roles Header Text: '//td[contains(text(), "Manage Employee Roles")]'
+      Create New Role Button: '//input[@type="button" and @name="btnNew"]'
+      Add Role Header Text: '//td[contains(text(), "Add Role")]'
+      Role Textbox: '//input[@type="text" and @name="txtRole"]'
+      Role Description Textbox: '//input[@type="text" and @name="txtDescription"]'
+      Add Role Button: '//input[@type="submit" and @name="btnAdd"]'
+      Update Role Header Text: '//td[contains(text(), "Update Role")]'
+      Lookup Checkbox Under LEADS: '//*[@id="Checkbox4"]'
+      New Lead Checkbox Under LEADS: '//*[@id="Checkbox5"]'
+      Lookup Checkbox Under CUSTOMERS: '//*[@id="Checkbox7"]'
+      New Customer Checkbox Under CUSTOMERS: '//*[@id="Checkbox1"]'
+      Update Permissions Button: '//*[@id="Submit1"]'
+      Functions Tab: '//a[contains(text(),''Functions'')]'
+      Wage Begin Date: '//input[@id=''txtBegin'']'
+      Wage Tyoe dropdown: '//select[@name=''cmbWageType'']'
+      Hourly Wage textbox: '//input[@id=''txtAmount'']'
+      Add button: '//input[@name=''btnAdd'']'
+      Time Card checkbox: '//input[@name=''chkTimeCard'']'
+      Add Checkbox Under SYSTEM-WIDE: >-
+        //*[@id="2ndopenformtable"]/tbody/tr/td/table/tbody/tr[1]/td[1]/table/tbody/tr[2]/td/input
+      Update Checkbox Under SYSTEM-WIDE: '//*[@id="chkUpdate"]'
+      Hyper-links Checkbox Under SYSTEM-WIDE: >-
+        //*[@id="2ndopenformtable"]/tbody/tr/td/table/tbody/tr[1]/td[1]/table/tbody/tr[5]/td/input
+      View Leads Checkbox Under LEADS: '//*[@id="Checkbox207"]'
+      Add Leads Checkbox Under LEADS: '//*[@id="Checkbox14"]'
+      Update Leads Checkbox Under LEADS: '//*[@id="Checkbox18"]'
+      View Customers Checkbox Under CUSTOMERS: '//*[@id="Checkbox66"]'
+      Add Customers Checkbox Under CUSTOMERS: '//*[@id="Checkbox13"]'
+      Update Customers Checkbox Under CUSTOMERS: '//*[@id="Checkbox19"]'
+      Add Work Orders Checkbox Under WORK ORDERS: '//*[@id="Checkbox15"]'
+      Update Work Orders Checkbox Under WORK ORDERS: '//*[@id="Checkbox21"]'
+      Update Permissions Button Under Functions Tab: '//input[@type="submit" and @name="btnUpdatePerm"]'
+      Buttons Tab: '/html/body/table[3]/tbody/tr/td[5]/a'
+      Reports Tab in Update Role page: '/html/body/table[3]/tbody/tr/td[7]/a'
+      Appointments Checkbox Under CUSTOMERS: '//*[@id="Checkbox64"]'
+      Update Checkbox Under CUSTOMERS: '//*[@id="Checkbox183" and contains(@name,''Update'')]'
+      Manual Schedule Under CUSTOMERS: '//*[@id="Checkbox73"]'
+      Update Permissions Button Under Buttons Tab: '//*[@id="Submit2"]'
+      All Status Checkbox Under STATUS: '//*[@id="Checkbox116"]'
+      Completed Checkbox Under STATUS: '//*[@id="Checkbox122"]'
+      Pending Checkbox Under STATUS: '//*[@id="Checkbox124"]'
+      Chargeback Checkbox Under STATUS: '//*[@id="Checkbox119"]'
+      Pending Chargeback Checkbox Under STATUS: '//*[@id="Checkbox186"]'
+      Appointments Checkbox Under TECHNICIAN: '//*[@id="chkRptAppointments"]'
+      Status Checkbox Under TECHNICIAN: '//*[@id="Checkbox130"]'
+      Update Permissions Button Under Reports Tab: '//*[@id="Submit3"]'
+      CARLOS CALDAS Checkbox Under Employee with this Role Table: '//label[text()=''CARLOS ACOSTA'']//parent::td/input[@type=''checkbox'']'
+      Change Lead Rep checkbox under Leads: '//input[@id="chkChangeLeadRepLeads"]'
+      Change Rep checkbox under Leads: '//input[@id="chkChangeRepLeads"]'
+      Employee name checkbox under Employees with this Role table: '(//td//input[contains(@id,"chkUnassign")])[1]'
+    name: HR - Roles
+  - selectors:
+      Time Card Management Header Text: '//td[contains(text(), "Time Card Management")]'
+      Current User Full Name Link Under Employees List: '//a[contains(., $User_Fullname)]'
+      Time Card logged with correct timeIn and TimeOut and Reason: >-
+        //td[contains(text(),$dateIn)]/following-sibling::td[1][contains(text(),$TimeIn)]/following-sibling::td[1][contains(text(),$dateOut)]/following-sibling::td[1][contains(text(),$TimeOut)]/following-sibling::td[2][contains(text(),$Reason)]
+      Updated Time Card with new timeIn and TimeOut and Reason: >-
+        //td[contains(text(),$dateIn)]/following-sibling::td[1][contains(text(),$updatedTimeIn)]/following-sibling::td[1][contains(text(),$dateOut)]/following-sibling::td[1][contains(text(),$updatedTimeOut)]/following-sibling::td[2][contains(text(),$updatedReason)]
+      New Time Card with correct timeIn and TimeOut and Reason: >-
+        //td[contains(text(),$newTimeIn)]/following-sibling::td[2][contains(text(),$newTimeOut)]/following-sibling::td[2][contains(text(),$newReason)]
+      Time Card edit button: >-
+        //td[contains(text(),$dateIn)]/following-sibling::td[1][contains(text(),$TimeIn)]/following-sibling::td[1][contains(text(),$dateOut)]/following-sibling::td[1][contains(text(),TimeOut)]/following-sibling::td[2][contains(text(),$Reason)]/following-sibling::td/input[@name='btnEdit']
+      Add new Card button: '//input[@name=''btnNewRow'']'
+      Time In textbox: '//input[@id=''Text2'']'
+      Time Out textbox: '//input[@id=''Text4'']'
+      Reason dropdown: '//select[contains(@name,''cmbReason'')]'
+      update button: '//input[@name=''btnUpdate'']'
+      User Full Name on Top Tab: '//table[@class="tab-top-header"]//td/a[@title]//parent::td'
+    name: HR - Time Cards
+  - selectors:
+      hr-primary-plans-new-rep-plan: '//*[@id="Table1"]/tbody/tr/td[2]/input[@name="btnNew"]'
+      New Plan Button Under Rep Plans: '//*[@id="Table1"]/tbody/tr/td[2]/input[@name="btnNew"]'
+      hr-primary-plans-show-details: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[4]/input[@name="btnShow"]'
+      Show Details Button Under Pay Plan: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[4]/input[@name="btnShow"]'
+      Emp Type Dropdown: '//*[@id="cmbEmpType"]'
+      Primary Plan Type Dropdown: '//*[@id="cmbPlanType"]'
+      Primary Plan Name Textbox: '//*[@id="txtPlanName"]'
+      PrimaryPlans Name: '//*[@id="txtPlanName"]'
+      hr-primary-plans-addon-programming: >-
+        //*[@id="2ndopenformtable"]/tbody/tr[4]/td[1]/select[@name="cmbProgAddOn"]
+      hr-primary-plans-addon-promotions: >-
+        //*[@id="2ndopenformtable"]/tbody/tr[4]/td[2]/select[@name="cmbPromoAddOn"]
+      PrimaryPlan Flat Rate: >-
+        //*[@id="2ndopenformtable"]/tbody/tr[2]/td[1]/table/tbody/tr[1]/td/input[@name="txtDishFlatRate"]
+      PrimaryPlan Holdback From: '//*[@id="Text75"]'
+      PrimaryPlan Holdback To: '//*[@id="Text76"]'
+      PrimaryPlan WorkOrder Percent: '//*[@id="Text77"]'
+      PrimaryPlan Add Button: '//*[@id="2ndopenformtable"]/tbody/tr[3]/td/input[@name="btnAdd"]'
+      PrimaryPlan Update Button: '//*[@id="2ndopenformtable"]/tbody/tr[3]/td/input[@name="btnUpdate"]'
+      hr-primary-plans-created-payplan: '//*[@id="Table5"]/tbody/tr[11]/td[1]/a[text()="{date_time}"]'
+      Recently Created PayPlan: '//*[@id="Table5"]/tbody/tr[11]/td[1]/a[text()="{date_time}"]'
+      Employee Type Hidden Value: '//*[@id="cmbEmpType"]'
+      hr-primary-plans-hidden-employee-type: '//*[@id="cmbEmpType"]'
+      Plan Type Hidden Value: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[2]/input[@name="cmbPlanType"]'
+      hr-primary-plans-hidden-plan-type: '//*[@id="2ndopenformtable"]/tbody/tr[2]/td[2]/input[@name="cmbPlanType"]'
+      hr-primary-plans-delete-created-plan: >-
+        //a[contains(descendant::text(),
+        "{date_time}")]/parent::*/parent::*/td[5]/a
+      Recently Created PrimaryPlan Delete Button: >-
+        //a[contains(descendant::text(),
+        "{date_time}")]/parent::*/parent::*/td[5]/a
+      Recently Created Primary Plan: '//a[text()=$primaryPlanName]'
+      Employee Type Value: '//label[@for=''cmbEmpType'']//following-sibling::b'
+      Plan Type Value: '//td[contains(text(),''Plan Type'')]//following-sibling::b'
+      Delete Button of Recently Created Primary Plan: >-
+        //td[a[text()=$primaryPlanName]]//following-sibling::td/a[contains(@href,'delete')]
+    name: HR Primary Plans
+  - selectors:
+      Add-on Plans: '//a[text()="Add-on Plans"]'
+      CD360 add on plans****: '//a[text()="CD360 add on plans****"]'
+      CenturyLink- TML Tab: '//a[text()="CenturyLink- TML"]'
+      BB 100M+: '//input[@name="txtPromo2240"]'
+      Add Promotions Plan Update Button: '//input[@value="Update"]'
+    name: HR Add-on Plans
+  - selectors:
+      New User Header Text: '//td[contains(text(), "New User")]'
+      hr-employee-payroll-tab: >-
+        //*[@id="Table8"]/tbody/tr[1]/td/table/tbody/tr/td[15]/a[contains(text(),
+        "Payroll")]
+      Payroll Tab In Employee Page: '//a[contains(text(),''Payroll'') and contains(@href, ''employee'')]'
+      Wage Button With Dollar Sign: '//input[@type="button" and @name="btnWage"]'
+      Pay Type Dropdown: '//select[@name="cmbPayType"]'
+      Areas Tab In Employee Page: >-
+        //*[@id="Table8"]/tbody/tr[1]/td/table/tbody/tr/td[3]/a[contains(text(),
+        "Areas")]
+      Info Tab In Employee Page: >-
+        //*[@id="Table8"]/tbody/tr[1]/td/table/tbody/tr/td[1]/a[contains(text(),
+        "Info")]
+      hr-employee-schedule-tab: '//*[@id="Table8"]/tbody/tr[1]/td/table/tbody/tr/td[17]/a'
+      Schedule Tab In Employee Page: '//*[@id="Table8"]/tbody/tr[1]/td/table/tbody/tr/td[17]/a'
+      Rep Pay Plan Dropdown Menu: '//*[@id="cmbRepPlan"]'
+      hr-employee-schedule-c1: '//*[@id="Table7"]/tbody/tr[2]/td[2]/input[1][@value="c"]'
+      C1 Button in Schedule Tab: '//*[@id="Table7"]/tbody/tr[2]/td[2]/input[1][@value="c"]'
+      hr-employee-schedule-c2: '//*[@id="Table7"]/tbody/tr[2]/td[3]/input[1][@value="c"]'
+      C2 Button in Schedule Tab: '//*[@id="Table7"]/tbody/tr[2]/td[3]/input[1][@value="c"]'
+      hr-employee-schedule-c3: '//*[@id="Table7"]/tbody/tr[2]/td[4]/input[1][@value="c"]'
+      C3 Button in Schedule Tab: '//*[@id="Table7"]/tbody/tr[2]/td[4]/input[1][@value="c"]'
+      hr-employee-schedule-c4: '//*[@id="Table7"]/tbody/tr[2]/td[5]/input[1][@value="c"]'
+      C4 Button in Schedule Tab: '//*[@id="Table7"]/tbody/tr[2]/td[5]/input[1][@value="c"]'
+      hr-employee-schedule-c5: '//*[@id="Table7"]/tbody/tr[2]/td[6]/input[1][@value="c"]'
+      C5 Button in Schedule Tab: '//*[@id="Table7"]/tbody/tr[2]/td[6]/input[1][@value="c"]'
+      hr-employee-schedule-c6: '//*[@id="Table7"]/tbody/tr[2]/td[7]/input[1][@value="c"]'
+      C6 Button in Schedule Tab: '//*[@id="Table7"]/tbody/tr[2]/td[7]/input[1][@value="c"]'
+      hr-employee-schedule-c7: '//*[@id="Table7"]/tbody/tr[2]/td[8]/input[1][@value="c"]'
+      C7 Button in Schedule Tab: '//*[@id="Table7"]/tbody/tr[2]/td[8]/input[1][@value="c"]'
+      hr-employee-schedule-save: '//*[@id="Submit1"]'
+      Save Button From Employee Page: '//*[@id="Submit1"]'
+      Save Button From Employee Schedule: '//*[@id="Submit1"]'
+      Created Area In Employee Page: '//*[contains(.,"E2E Area")]/input[@type="checkbox"]'
+      User Role Dropdown: '//*[@id="cmbRole"]'
+      Role Dropdown: '//select[@name="cmbRoleID"]'
+      User Type Dropdown: '//*[@id="cmbUserType"]'
+      First Textbox In Employee Page: '//*[@id="txtFName"]'
+      Last Textbox In Employee Page: '//*[@id="txtLName"]'
+      Phone Textbox In Employee Page: '//*[@id="txtPhone"]'
+      Active Checkbox Under Employee Page: '//*[@id="txtActive"]'
+      Add Button Under Employee Page: '//*[@id="Submit3"]'
+      Username Textbox Under Employee Page: '//*[@id="Text9"]'
+      Click here to change password Link: '//a[text()="Click here to change password."]'
+      Password Textbox Under Employee Page: '//*[@id="txtPassword"]'
+      Timezone Dropdown Under Employee Page: '//*[@id="cmbTimeZone"]'
+      Rep Checkbox Under Employee Page: '//*[@id="chkRep"]'
+      Save Button Under Employee Page: '//*[@id="Submit1"]'
+      Set Task Payroll Dropdown: '//*[@id=''cmbTaskPayollG'']'
+      Set Task Payroll Date Textbox: '//*[@id=''payPlanStartDateG'']'
+      TestPlan With Effective Date Next To Current Task Payroll: '//span[text()=''TestPlan'']'
+      Created Role inside Role Dropdown: '//option[contains(text(),$createdRole)]'
+    name: HR Employee
+  - selectors:
+      Update Link For Plan Named TestPlan: '//td[text()="TestPlan"]/parent::tr/td[5]/form/a[text()="Update"]'
+      Active Checkbox: '//*[@id="editPayPlanForm"]/div[2]/div[2]/div/input[1]'
+      Save Button In Rule Plan Mgmt:
+        - '//iframe[@id=''PayPlanMgmt_Frame'']'
+        - '//*[@id=''savePlanButton'']'
+      PayPlan Named TestPlan:
+        - '//iframe[@id=''PayPlanMgmt_Frame'']'
+        - '//td[contains(text(),''TestPlan'')]'
+      Inactive Link Below Rule Plan Mgmt Header Text:
+        - '//iframe[@id=''PayPlanMgmt_Frame'']'
+        - '//a[text()=''Inactive'']'
+      Rule Plan Mgmt Header Text:
+        - '//iframe[@id=''PayPlanMgmt_Frame'']'
+        - '//h2[contains(text(),''Rule Plan Mgmt'')]'
+      Update Link For Plan 'TestPlan':
+        - '//iframe[@id=''PayPlanMgmt_Frame'']'
+        - >-
+          //td[contains(text(),'TestPlan')]/ancestor::tr//a[contains(text(),'Update')]
+      Active checkbox:
+        - '//iframe[@id=''PayPlanMgmt_Frame'']'
+        - >-
+          //label[contains(text(),'Active')]/ancestor::div//input[@type='checkbox']
+    name: HR - Rule Plan Mgmt
+  - selectors:
+      unauthorized-description: '//*[@id="errMessage"]/b'
+      Unauthorized Description: '//*[@id="errMessage"]/b'
+      Click Here To Login Link: '//a[contains(text(), "Click here to login")]'
+      An error has occurred Error Message: '/html/body[contains(text(), "An error has occurred")]'
+    name: Unauthorized
+  - selectors:
+      int-login-username: '//*[@id="Form1"]/fieldset/div[1]/div[2]/input'
+      Internal Username: '//*[@id="Form1"]/fieldset/div[1]/div[2]/input'
+      int-login-password: '//*[@id="Form1"]/fieldset/div[2]/div[2]/input'
+      Internal Password: '//*[@id="Form1"]/fieldset/div[2]/div[2]/input'
+      int-login-submit: '//*[@id="Send"]'
+      Internal Login Button: '//*[@id="Send"]'
+    name: Internal - Login
+  - selectors:
+      int-logout: '//a[@title="Logout"]'
+      Logout Button: '//a[@title="Logout"]'
+      Internal Logout Button: '//a[contains(text(), "Logout")]'
+      Setup Tab: '//*[@id="tabUtils"]'
+      int-promotions: '//a[contains(text(), "Promotions")]'
+      Internal Promotions Submenu Item: '//a[contains(text(), "Promotions")]'
+      Kits Submenu Item: '//a[contains(text(), "Kits")]'
+      Kits Submenu: '//a[@class="vertmenu" and contains(text(), "Kits")]'
+      Kit Templates Header Text: '//td[contains(text(), "Kit Templates")]'
+      Kit Templates Header:
+        - '//iframe[@id=''frmBody'']'
+        - '//td[@class=''medium'']'
+      Internal Customers Tab: '//*[@id="tabCustomers"]'
+      Internal Lookup Submenu Item: './/*[@id="vertMenuCustomers"]//a[text()=''Lookup'']'
+    name: Internal - Home
+  - selectors:
+      Internal Customer Lookup Header:
+        - '//iframe[@id=''frmBody'']'
+        - '//td[contains(text(), ''Customer Lookup'')]'
+      Internal Customer Company Dropdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@id=''DropDownExTextboxExample'']'
+      Internal Customer Go:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''btnLookup'']'
+      Internal Customer CLEAR SATTELLITE Company Link:
+        - '//iframe[@id=''frmBody'']'
+        - '//a[contains(text(), ''CLEAR SATTELLITE'')]'
+      Internal Customer Company Name:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtCompanyName'']'
+    name: Internal - Customer Lookup
+  - selectors:
+      Internal Promotions Header:
+        - '//iframe[@id=''frmBody'']'
+        - '//td[contains(text(), ''Promotions'')]'
+      Promotions Textbox:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtPromotion'']'
+      Promotions Provider:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbVendor'']'
+      Promotions Type:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbType'']'
+      Promotions Class:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbSubClass'']'
+      Promotions Reconcile By:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReconBy'']'
+      Promotions Code:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtPromoCode'']'
+      Promotions Add Button:
+        - '//iframe[@id=''frmBody'']'
+        - '//*[@id=''Submit2'']'
+      Promotions New Activation:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeAC'']'
+      Promotions Must Carry:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeMC'']'
+      Promotions Upgrade:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeUP'']'
+      Promotions Presale Consultation:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypePS'']'
+      Promotions Trouble Call:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeTC'']'
+      Promotions Pull Equipment:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypePE'']'
+      Promotions Trouble Call No Pay:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeTCNP'']'
+      Promotions Reconnect:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeRC'']'
+      Promotions Sale:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeSA'']'
+      Promotions Restart:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeRS'']'
+      Promotions Refund:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeRE'']'
+      Promotions Service Call:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeSC'']'
+      Promotions Change Of Service:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeCH'']'
+      Promotions Site Survey:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeSS'']'
+      Promotions Dish Mover:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''chkInvTypeDM'']'
+      Promotions Active:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtInactive'']'
+      Created Promotion Entry:
+        - '//iframe[@id=''frmBody'']'
+        - '//a[text()=$promotions]'
+      ATTUVI Option:
+        - '//iframe[@id=''frmBody'']'
+        - '//option[@value=''ATTUVI'']'
+      Residential Option Inside Promotion Types:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbType'']//option[@value=''R'']'
+      OE Option Inside Promotions Class:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbSubClass'']//option[@value=''OE'']'
+      Receiver Option Inside Promotions Reconcile By:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReconBy'']//option[@value=''R'']'
+    name: Internal - Promotions
+  - selectors:
+      int-kits-templates: '//*[@id="Table4"]/tbody/tr[2]/td/a[1]/b'
+      int-kits-kits: '//*[@id="Table4"]/tbody/tr[2]/td/a[2]'
+      Created Kit Template Menu Item:
+        - '//iframe[@id=''frmBody'']'
+        - '//option[contains(text(),$KitTemplateDescription)]'
+      Kits Link:
+        - '//iframe[@id=''frmBody'']'
+        - '//a[text()=''Kits'']'
+      Kit Template Drowpdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbConfiguration'']'
+      Receiver1: '/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/select[1]'
+      Receiver1 Dropdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver1'']'
+      Wally Option For Receiver1:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver1'']//option[contains(text(),''Wally'')]'
+      Receiver2: '/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/select[2]'
+      Receiver2 Dropdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver2'']'
+      4K Joey Option For Receiver2:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver2'']//option[contains(text(),''4K Joey'')]'
+      Receiver3: '/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/select[3]'
+      Receiver3 Dropdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver3'']'
+      Joey 2(dot)0 Option For Receiver3:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver3'']//option[contains(text(),''Joey 2.0'')]'
+      Receiver4: '/html/body/table[2]/tbody/tr/td/table/tbody/tr[2]/td/select[4]'
+      Receiver4 Dropdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver4'']'
+      Genie 2 Option For Receiver4:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver4'']//option[contains(text(),''Genie 2'')]'
+      Receiver5: '//*[@id="Select1"]'
+      Receiver5 Dropdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver5'']'
+      Hopper Duo Option For Receiver5:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver5'']//option[contains(text(),''Hopper Duo'')]'
+      Receiver6: '//*[@id="Select2"]'
+      Receiver6 Dropdown:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver6'']'
+      Joey 3 Option For Receiver6:
+        - '//iframe[@id=''frmBody'']'
+        - '//select[@name=''cmbReceiver6'']//option[contains(text(),''Joey 3'')]'
+      Kit Template Description:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtDescription'']'
+      Kit Template DVR:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtDVR'']'
+      Kit Template HD:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtHighDef'']'
+      Active Checkbox In Kit Template:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''txtInactive'']'
+      int-kits-templates-add: '//input[@name="btnAdd"]'
+      Add Button In Kit Templates Page:
+        - '//iframe[@id=''frmBody'']'
+        - '//input[@name=''btnAdd'']'
+      int-kits-templates-link: '//a[contains(descendant::text(), "Kit Templates")]'
+      Created Kit Template Entry: '//a[contains(descendant::text(), "{date_time}")]'
+      Created Kit Template Entry In Kit Templates Page:
+        - '//iframe[@id=''frmBody'']'
+        - '//span[contains(text(),$KitTemplateDescription)]'
+      Wally Option as Selected For Receiver1:
+        - '//iframe[@id=''frmBody'']'
+        - >-
+          //select[@name='cmbReceiver1']//option[@selected='' and
+          contains(text(),'Wally')]
+      4K Joey Option as Selected For Receiver2:
+        - '//iframe[@id=''frmBody'']'
+        - >-
+          //select[@name='cmbReceiver2']//option[@selected='' and
+          contains(text(),'4K Joey')]
+      Joey 2(dot)0 Option as Selected For Receiver3:
+        - '//iframe[@id=''frmBody'']'
+        - >-
+          //select[@name='cmbReceiver3']//option[@selected='' and
+          contains(text(),'Joey 2.0')]
+      Genie 2 Optionas Selected For Receiver4:
+        - '//iframe[@id=''frmBody'']'
+        - >-
+          //select[@name='cmbReceiver4']//option[@selected='' and
+          contains(text(),'Genie 2')]
+      Hopper Duo Option as Selected For Receiver5:
+        - '//iframe[@id=''frmBody'']'
+        - >-
+          //select[@name='cmbReceiver5']//option[@selected='' and
+          contains(text(),'Hopper Duo')]
+      Joey 3 Option as Selected For Receiver6:
+        - '//iframe[@id=''frmBody'']'
+        - >-
+          //select[@name='cmbReceiver6']//option[@selected='' and
+          contains(text(),'Joey 3')]
+    name: Internal - Kits
+  - selectors:
+      New Lead Header Text: '//*[@id="divLeadTitle"]'
+      New Lead Table: '//table[@id=''2ndopenformtable'']'
+      primary phone Under New Lead: '//input[@id=''txtPhone'']'
+      first name Under New Lead: '//input[@id=''txtFName'']'
+      Trade In Dropdown: '//*[@id="cmbCustom3DD"]'
+      last name Under New Lead: '//input[@id=''txtLName'']'
+      area Under New Lead: '//select[@id=''cmbArea'']'
+      ALLIANCE TECHNOLOGY GROUP Option Under New Lead: >-
+        //*[@id="cmbArea"]//option[contains(text(), "ALLIANCE TECHNOLOGY
+        GROUP")]
+      lead rep Under New Lead: '//select[@id=''cmbLeadRep'']'
+      lead rep Under New Lead Options: '//select[@id=''cmbLeadRep'']//option'
+      rep Under New Lead: '//select[@id=''cmbRep'']'
+      rep Under New Lead Options: '//select[@id=''cmbRep'']//option'
+      ADAN C HERNANDEZ rep Under New Lead: '//select[@id=''cmbRep'']//option[contains(text(), "ADAN C HERNANDEZ")]'
+      provider Under New Lead: '//select[@id=''cmbSatelliteProvider'']'
+      DIRECTV Provider Option Under New Lead: '//select[@id=''cmbSatelliteProvider'']//option[text()="DIRECTV"]'
+      Add Button Under New Lead: '//input[@id=''btnAdd2'']'
+      Delete Lead Button: '//input[@type=''button'' and @value=''Delete Lead'']'
+      Lead Title: '//span[@id=''divLeadTitle'']'
+      Type Dropdown Under New Lead: '//select[@id=''cmbWOType'']'
+      New Activation Option In Type Dropdown: '//select[@id=''cmbWOType'']//option[contains(text(), "New Activation")]'
+      Promotion Dropdown Under New Lead: '//select[@id=''cmbPromotion2'']'
+      DIRECTV 24 month Promotion Option Under New Lead: >-
+        //select[@id='cmbPromotion2']//option[contains(text(), "DIRECTV 24
+        month")]
+      Number TVs 1: '//input[@id="radTVs_1"]'
+      Receivers Under New Lead: '//input[@id=''Button3'']'
+      Lookup Button Under Leads: >-
+        //a[@href='https://qa.import.agemni.com/cms/leadslookup.asp?which=leadcenter']
+      Lookup Button Under Leads New: '//a[contains(@href,''/leadslookup.asp'')]'
+      Lookup V2 Button Under Leads Tab: '//*[@id="tab-1"]/li[2]/a'
+      Lead Entry In The Table Named E2E LEAD:
+        - '//iframe[@id=''LookupV2Frame'']'
+        - '//a[contains(text(), ''E2E LEAD'')]'
+      Delete Button For E2E LEAD:
+        - '//iframe[@id=''LookupV2Frame'']'
+        - '(//a[@class=''icon-link''])[1]'
+      Lookup Table: '//table[@id=''2ndopenformtable'']'
+      Begin Date In Lead Lookup V2:
+        - '//iframe[@id=''LookupV2Frame'']'
+        - '//*[@id=''BeginDate'']'
+      Search Button In Lead Lookup V2:
+        - '//iframe[@id=''LookupV2Frame'']'
+        - '//*[@id=''SearchBtn'']'
+      Lead Lookup Status Dropdown: '//select[@name="cmbLead"]'
+      Lead Lookup Go Button: '//input[@name=''btnLookup'']'
+      Lead Lookup Results Table: '//div[@id="ie6-container-wrap"]/table[2]'
+      MIGUEL FRANCISCO In Results Table: '//a[contains(text(), "MIGUEL  FRANCISCO")]'
+      Lead Lookup Results 2nd Page Link: '//a[@title="251-500"]'
+      Street Textbox Under Lead: '//*[@id="txtStreet"]'
+      Leads and Customers Lookup V2 Page:
+        - '//iframe[@id=''LookupV2Frame'']'
+        - '//h4[text()=''Leads and Customers Lookup V2'']'
+      Lead Lookup Entry In The Table Named E2E LEAD: '//a[contains(text(), ''E2E LEAD'')]'
+      Dialog Ok Button: '//span[@class=''ui-button-text''][text()=''Ok'']'
+    name: Leads
+  - selectors:
+      Receivables Button: '//input[@value=''Receivables'']'
+      Amount in Receivables Window: '//input[@name=''txtAmount'']'
+      Add Button in Receivables Window: '//input[@value=''Add'']'
+      Table Data in Receivables Window Var datVar: '//td[contains(text(), $datVar)]'
+      Table Data Delete in Receivables Window Var datVar: '//td[contains(text(), $datVar)]/following::a[1]'
+    name: Receivables
+credentials:
+  - type: basic
+    username: admin
+    password: Agemni2021
+    id: admin-qa
+  - type: basic
+    username: admin
+    password: Agemni2021
+    id: admin-TempDataForTest
+  - type: basic
+    username: admin
+    password: Agemni2021
+    id: admin-internal
+  - type: basic
+    username: dato
+    password: Agemni2021
+    id: dato-TempDataForTest
+  - type: basic
+    username: agsup
+    password: Agemni2020
+    id: agsup-krcomm
+  - type: basic
+    username: agsup
+    password: Agemni2021
+    id: agsup-Microcom
+  - type: basic
+    username: agsup
+    password: Agemni2022
+    id: agsup-TempDataForTest
+  - type: basic
+    username: e2e
+    password: Agemni2022
+    id: admin-e2e-TempDataForTest
+  - type: basic
+    username: e2etester
+    password: Agemni2021
+    id: admin-e2e-tester-TempDataForTest
+  - type: basic
+    username: development
+    password: zdt67IL
+    id: SQL-Credentials
+  - type: basic
+    username: admin
+    password: Agemni2021
+    id: microcom-admin
+  - type: basic
+    username: krcomm
+    password: Agemni2020
+    id: krcomm-user
+  - type: basic
+    username: david
+    password: Agemni2022
+    id: prod-david
+variables:
+  Cell Phone Number: 9998887777
+  Activation Date: 03/09/2021
+  WorkOrder Number: 31211
