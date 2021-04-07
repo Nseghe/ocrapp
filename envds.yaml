@@ -1,4 +1,5 @@
-- name: oscment-PR-1575
+environments:
+  - name: oscment-PR-1575
     type: QA
     automated: false
     endpoints:
